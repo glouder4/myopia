@@ -26,6 +26,10 @@ $curPage = $APPLICATION->GetCurPage(true);
 	?>
     <title><? $APPLICATION->ShowTitle(); ?></title>
     <link rel="shortcut icon" type="image/png" href="<?= SITE_TEMPLATE_PATH ?>/images/faivcon.png"/>
+
+    <?php
+        $APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => SITE_TEMPLATE_PATH ."/template_colors_modifier.php"), false);
+    ?>
 </head>
 <body>
 
@@ -56,27 +60,23 @@ $curPage = $APPLICATION->GetCurPage(true);
             <div class="container">
                 <div class="social-wrap-head col-md-3 no-pad">
                     <?
-                    $facebookLink = $APPLICATION->GetFileContent($_SERVER["DOCUMENT_ROOT"]."/include/socnet_facebook.php");
-                    $twitterLink = $APPLICATION->GetFileContent($_SERVER["DOCUMENT_ROOT"]."/include/socnet_twitter.php");
-                    $googlePlusLink = $APPLICATION->GetFileContent($_SERVER["DOCUMENT_ROOT"]."/include/socnet_google.php");
-                    $linkedinLink = $APPLICATION->GetFileContent($_SERVER["DOCUMENT_ROOT"] ."/include/socnet_linkedin.php");
-                    $rssLink = $APPLICATION->GetFileContent($_SERVER["DOCUMENT_ROOT"] ."/include/socnet_rss.php");
+                        $vkLink = $APPLICATION->GetFileContent($_SERVER["DOCUMENT_ROOT"]."/include/socnet_vk.php");
+                        $tgLink = $APPLICATION->GetFileContent($_SERVER["DOCUMENT_ROOT"]."/include/socnet_tg.php");
+                        $dzenLink = $APPLICATION->GetFileContent($_SERVER["DOCUMENT_ROOT"]."/include/socnet_dzen.php");
+                        $youtubeLink = $APPLICATION->GetFileContent($_SERVER["DOCUMENT_ROOT"]."/include/socnet_youtube.php");
                     ?>
                     <ul>
-                        <? if ($facebookLink): ?>
-                            <li><? $APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => "/include/socnet_facebook.php"), false); ?></li>
+                        <? if ($vkLink): ?>
+                            <li><? $APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => "/include/socnet_vk.php"), false); ?></li>
                         <? endif ?>
-                        <? if ($twitterLink): ?>
-                            <li><? $APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => "/include/socnet_twitter.php"), false); ?></li>
+                        <? if ($tgLink): ?>
+                            <li><? $APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => "/include/socnet_tg.php"), false); ?></li>
                         <? endif ?>
-                        <? if ($googlePlusLink): ?>
-                            <li><? $APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => "/include/socnet_google.php"), false); ?></li>
+                        <? if ($dzenLink): ?>
+                            <li><? $APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => "/include/socnet_dzen.php"), false); ?></li>
                         <? endif ?>
-                        <? if ($twitterLink): ?>
-                            <li><? $APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => "/include/socnet_linkedin.php"), false); ?></li>
-                        <? endif ?>
-                        <? if ($rssLink): ?>
-                            <li><? $APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => "/include/socnet_rss.php"), false); ?></li>
+                        <? if ($youtubeLink): ?>
+                            <li><? $APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => "/include/socnet_youtube.php"), false); ?></li>
                         <? endif ?>
                     </ul>
                 </div>
