@@ -25,7 +25,11 @@
     .dept-details-butt,
     ul.left-menu li a,
     .tabs-left .nav-tabs >li.active >a,
-    .tabs-left .nav-tabs >li.active >a:hover{
+    .tabs-left .nav-tabs >li.active >a:hover,
+    #blog-medium-left .r-more a,
+    .doctors-3col-tabs .nav >li >a:hover,
+    .blog-box-title,
+    .post-meta a{
         color: <?=$CUR_COLOR_MAIN;?>;
     }
     li.flexMenu-viewMore >a{
@@ -55,7 +59,11 @@
     input.auth-sumbit.btn,
     .collapse-widget-side .ui-state-default .collapse-cheveron:before,
     .collapse-widget-side .ui-state-default .collapse-cheveron:after,
-    .tabs-left .nav-tabs >li.active >a .dept-tabs-icon{
+    .tabs-left .nav-tabs >li.active >a .dept-tabs-icon,
+    .doctors-3col-tabs .nav-tabs >li.active >a:before,
+    .doctors-3col-tabs .nav >li >a:before,
+    .contact2-page-form .btn2-st2,
+    .back-btn{
         background: <?=$CUR_COLOR_MAIN;?>;
     }
     .dropdown-menu >.active >a,
@@ -71,7 +79,8 @@
     }
     .tabs-left >.nav-tabs >li >a:hover .dept-tabs-icon,
     .ui-state-active,
-    .collapse-widget-side .ui-state-active{
+    .collapse-widget-side .ui-state-active,
+    .dropdown-menu >.active >a:hover{
         background-color: <?=$CUR_COLOR_MAIN;?>!important;
     }
     .iconbox-readmore,
@@ -80,11 +89,15 @@
     .inner-page-butt-blue,
     .purchase-strip-blue.dept-apponit-butt .btn,
     .dept-details-butt,
-    ul.left-menu li{
+    ul.left-menu li,
+    #blog-medium-left .r-more a,
+    .back-btn{
         border-color: <?=$CUR_COLOR_MAIN;?>;
     }
     .inner-page-butt-blue,
-    .appointment-form .btn-7{
+    .appointment-form .btn-7,
+    .contact2-page-form .btn2-st2,
+    .back-btn{
         box-shadow: 0 2px <?=$CUR_COLOR_MAIN_ADD;?>;
     }
     .service-box .rot-y .panel-icon:after{
@@ -112,7 +125,8 @@
         .navbar-default .navbar-nav > .active > a:before {
             background: <?=$CUR_COLOR_MAIN;?>;
         }
-        .navbar-default .navbar-nav >.active >a{
+        .navbar-default .navbar-nav >.active >a,
+        .navbar-default .navbar-nav >.active >a:hover{
             color: <?=$CUR_COLOR_MAIN;?>;
         }
     }
