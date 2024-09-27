@@ -1,0 +1,457 @@
+.shedule2doc, .shedule2doc:hover {
+	border: 0 solid #e0e1e2 !important;
+	color: white;
+	display: inline-block;
+	font-size: 20px;
+	padding: 5px;
+	text-decoration: none;
+	width: 100%;
+}
+.cl_clear {
+	clear: both;
+	width: 100%;
+}
+#shedule_form .clinics .clinic {
+	border: 1px solid #ddd;
+	clear: both;
+	margin: 10px 0;
+	position: relative;
+}
+#shedule_form .clinics .clinic .open_doctors {
+	border: 1px solid white;
+	bottom: -1px;
+	color: white;
+	cursor: pointer;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 8px;
+	position: absolute;
+	right: -1px;
+	text-align: center;
+	text-transform: uppercase;
+	width: 60%;
+}
+#shedule_form .clinics .clinic .clinic_top {
+	margin-left: 12px;
+	position: relative;
+}
+#shedule_form .clinics .clinic .clinic_top .clinic_ico {
+	float: left;
+	margin-right: 15px;
+	margin-top: 45px;
+	overflow: hidden;
+	width: calc(15% - 15px);
+}
+#shedule_form .clinics .clinic .clinic_top .clinic_ico img {
+	width: 100%;
+}
+#shedule_form .clinics .clinic .clinic_top .clinic_info {
+	float: left;
+	padding-bottom: 15px;
+	position: relative;
+	width: 85%;
+}
+#shedule_form .clinics .clinic .clinic_top .clinic_info h3 {
+	display: block;
+	margin: 5px 0 10px;
+	width: 100%;
+}
+#shedule_form .clinics .clinic .clinic_doctors {
+	clear: both;
+	display: none;
+}
+#shedule_form .clinics .clinic .clinic_doctors .doctor {
+	border: 1px solid #ddd;
+	clear: both;
+	margin: 10px;
+	padding: 10px;
+	width: calc(100% - 20px);
+}
+#shedule_form .clinics .clinic .clinic_doctors .doctor .doctor_ico {
+	float: left;
+	width: 30%;
+}
+#shedule_form .clinics .clinic .clinic_doctors .doctor .doctor_ico > p, #shedule_form .top_doctor_info .left_doctor_info p, #contact-version-two .doctor_group .doctor .doctor_ico p {
+	text-align: center;
+}
+#shedule_form .clinics .clinic .clinic_doctors .doctor .doctor_ico img {
+	width: 100%;
+}
+#shedule_form .clinics .clinic .clinic_doctors .doctor .doctor_info {
+	float: left;
+	line-height: 15px;
+	margin-left: 10px;
+	text-align: left;
+	width: calc(70% - 10px);
+}
+#shedule_form .clinics .clinic .clinic_doctors .doctor .doctor_ico h4 {
+	text-align: center;
+}
+#shedule_form .shedule_to_doc {
+	color: white;
+	font-size: 26px;
+	line-height: 28px;
+	padding: 12px;
+	text-align: center;
+}
+#shedule_form .shedule_to_doc a {
+	color: white;
+}
+#shedule_form .top_doctor_info .left_doctor_info {
+	float: left;
+	width: 30%;
+}
+#shedule_form .top_doctor_info .left_doctor_info img {
+	width: 100%;
+}
+#shedule_form .top_doctor_info .left_doctor_info h3 a {
+	margin: 0;
+	text-align: center;
+}
+#shedule_form .top_doctor_info .right_doctor_info {
+	float: left;
+	margin-left: 10px;
+	width: calc(70% - 10px);
+}
+#shedule_form .top_doctor_info .right_doctor_info p {
+	line-height: 16px;
+	text-align: justify;
+}
+#shedule_form .bottom_shedule {
+	border-top: 1px solid #ddd;
+	clear: both;
+	width: 100%;
+}
+#shedule_form .bottom_shedule .shedule_left {
+	border-right: 1px solid #ddd;
+	float: left;
+	padding-right: 10px;
+	width: 180px;
+}
+#shedule_form .bottom_shedule .shedule_left #doc_days {
+	margin-top: 3px;
+}
+#shedule_form .bottom_shedule .shedule_left #doc_days li {
+	border: 2px solid white;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	margin: 4px 0;
+	padding-right: 12px;
+	text-align: right;
+	width: 100%;
+	transition: all 0.3s;
+}
+#shedule_form .bottom_shedule .shedule_left #doc_days li .day_info {
+	height: 60px;
+	padding: 5px 0;
+}
+#shedule_form .bottom_shedule .shedule_left #doc_days li .day_info .day_date {
+	font-size: 24px;
+	line-height: 24px;
+	margin-bottom: 4px;
+	padding-bottom: 1px;
+
+}
+#shedule_form .bottom_shedule .shedule_left #doc_days li .day_info .day_week {
+	font-size: 14px;
+}
+#shedule_form .bottom_shedule .shedule_left #doc_days li.active, #shedule_form .bottom_shedule .shedule_left #doc_days li:hover {
+	border-color: #999;
+}
+#shedule_form .bottom_shedule .shedule_left .move_top {
+	border: 2px solid white;
+	color: white;
+	cursor: pointer;
+	font-size: 23px;
+	padding: 10px 0;
+	text-indent: 42%;
+	width: 100%;
+}
+#shedule_form .bottom_shedule .shedule_left .move_top:hover {
+	border-color: #333;
+}
+#shedule_form .bottom_shedule .shedule_left .move_down {
+	border: 2px solid white;
+	color: white;
+	cursor: pointer;
+	font-size: 23px;
+	padding: 10px 0;
+	text-indent: 42%;
+	width: 100%;
+	transition: all 0.3;
+}
+#shedule_form .bottom_shedule .shedule_left .move_down:hover {
+	border-color: #999;
+	background: #0C649E;
+}
+#shedule_form .bottom_shedule .shedule_right {
+	float: left;
+	width: calc(100% - 180px);
+}
+#shedule_form .bottom_shedule .shedule_right_legend {
+	border-bottom: 1px solid #ddd;
+	color: white;
+	font-size: 20px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	text-align: center;
+}
+#shedule_form .bottom_shedule .shedule_right_legend .legends {
+	color: #333;
+	margin: 20px 0 10px;
+}
+#shedule_form .bottom_shedule .shedule_right_legend .legends .legend_cont {
+	padding-left: 35px;
+	position: relative;
+}
+#shedule_form .bottom_shedule .shedule_right_legend .legends .legend_cont > span {
+	left: 0;
+	position: absolute;
+	top: 0;
+}
+#shedule_form .bottom_shedule .shedule_right_legend .legends .legend_cont .legend_free {
+	display: inline-block;
+	height: 30px;
+	padding: 2px 10px;
+	width: 30px;
+}
+#shedule_form .bottom_shedule .shedule_right_legend .legend_no_free {
+	background: #999 none repeat scroll 0 0;
+	display: inline-block;
+	height: 30px;
+	padding: 2px 10px;
+	text-align: center;
+	width: 30px;
+}
+#shedule_form .bottom_shedule .shedule_right_bottom {
+	padding: 5px 10px;
+}
+#shedule_form .bottom_shedule .shedule_right_bottom span.time {
+	display: none;
+}
+#shedule_form .bottom_shedule .shedule_right_bottom span.time.visible_time {
+	border: 2px solid white;
+	display: inline-block;
+	float: left;
+	font-size: 24px;
+	margin: 0 5px 5px 0;
+	min-width: 70px;
+	padding: 5px 0;
+	text-align: center;
+	width: 15%;
+}
+#shedule_form .bottom_shedule .shedule_right_bottom span.time.free {
+	color: white;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+#shedule_form .bottom_shedule .shedule_right_bottom span.time.free:hover {
+	border-color: #999;
+	background: #0C649E;
+}
+#shedule_form .bottom_shedule .shedule_right_bottom span.time.no_free {
+	background-color: #999;
+	color: #ddd;
+}
+#shedule_form .top_doctor_info .left_doctor_info h3 {
+	text-align: center;
+}
+#shedule_form .fader {
+	background: white url("img/loading.gif") no-repeat scroll center center;
+	bottom: 0;
+	display: none;
+	height: 100%;
+	left: 0;
+	opacity: 0.8;
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
+}
+#contact-version-two .doctor_group .doctor {
+	border: 1px solid #ddd;
+	clear: both;
+	margin-bottom: 10px;
+	padding: 10px;
+	width: 50%;
+}
+#contact-version-two .doctor_group .doctor .doctor_ico img {
+	height: auto;
+	width: 100%;
+}
+#contact-version-two .doctor_group .doctor .doctor_info {
+	color: white;
+	line-height: 15px;
+	padding: 6px;
+}
+#contact-version-two .doctor_group .doctor .doctor_info .shedule_day {
+	font-size: 18px;
+	text-align: center;
+	width: 100%;
+}
+#contact-version-two .doctor_group .doctor .doctor_info .shedule_time {
+	font-size: 18px;
+	margin-top: 10px;
+	text-align: center;
+}
+#contact-version-two .doctor_group .doctor .doctor_ico h4 {
+	text-align: center;
+}
+a.voucher_print_link {
+	font-size: 16px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.voucher_container .legend {
+	font-size: 14px;
+	margin: 20px 0;
+	text-align: center;
+}
+@media (max-width: 767px) {
+	#shedule_form .voucher_print {
+		display: none;
+	}
+	#shedule_form .bottom_shedule .shedule_left {
+		width: 100px;
+	}
+	#shedule_form .bottom_shedule .shedule_right_bottom span.time.visible_time {
+		font-size: 15px;
+		margin: 0 5px 5px 0;
+		min-width: 50px;
+		padding: 5px 0;
+	}
+	#shedule_form .bottom_shedule .shedule_right_legend .legends {
+		clear: both;
+		float: left;
+		margin: 0;
+		width: 100%;
+	}
+	#shedule_form .bottom_shedule .shedule_right_legend .legends .legend_cont {
+		display: inline-block;
+		float: left;
+		font-size: 16px;
+		height: 35px;
+		margin: 0;
+	}
+	#shedule_form .bottom_shedule .shedule_right_legend .legends .legend_cont > span {
+	}
+	#shedule_form .bottom_shedule .shedule_right_legend .legends .legend_cont .legend_no_free {
+		font-size: 14px;
+		height: 20px;
+		margin: 5px 0 0 3px;
+		padding: 0;
+		width: 20px;
+	}
+	#shedule_form .bottom_shedule .shedule_right_legend .legends .legend_cont .legend_free {
+		font-size: 14px;
+		height: 20px;
+		margin: 5px 0 10px 3px;
+		padding: 0;
+		text-align: center;
+		width: 20px;
+	}
+	#shedule_form .bottom_shedule .shedule_right_legend {
+	}
+	#shedule_form .bottom_shedule .shedule_left #doc_days li .day_info .day_date {
+		font-size: 12px;
+		line-height: 14px;
+	}
+	#shedule_form .bottom_shedule .shedule_left #doc_days li .day_info .day_week {
+		font-size: 10px;
+		line-height: 12px;
+	}
+	#shedule_form .bottom_shedule .shedule_right {
+		width: calc(100% - 100px);
+	}
+	#shedule_form .bottom_shedule .shedule_left #doc_days li .day_info {
+		height: 45px;
+	}
+	#shedule_form .bottom_shedule .shedule_left .move_down {
+		font-size: 14px;
+	}
+	#shedule_form .bottom_shedule .shedule_left .move_top {
+		font-size: 14px;
+	}
+	#shedule_form .top_doctor_info .left_doctor_info h3 a {
+		font-size: 18px;
+	}
+	#shedule_form .clinics .clinic .open_doctors {
+		font-size: 14px;
+		letter-spacing: 1px;
+		margin-top: 10px;
+		position: relative;
+		width: 100%;
+	}
+	#shedule_form .shedule_to_doc {
+		font-size: 20px;
+	}
+	#shedule_form .clinics .clinic .clinic_top .clinic_ico {
+		float: none;
+		margin: 15px auto 0;
+		width: 90%;
+	}
+	#shedule_form .clinics .clinic .clinic_top {
+		margin: 0 auto;
+	}
+	#shedule_form .clinics .clinic .clinic_top .clinic_info {
+		float: none;
+		margin: 0 auto;
+	}
+	#shedule_form .clinics .clinic .clinic_doctors .doctor .doctor_ico {
+		float: none;
+		width: 100%;
+	}
+	#shedule_form .clinics .clinic .clinic_doctors .doctor .doctor_info {
+		margin: 0 auto;
+		text-align: justify;
+		width: 100%;
+	}
+	#shedule_form .top_doctor_info .right_doctor_info {
+		display: none;
+	}
+	#shedule_form .top_doctor_info .left_doctor_info {
+		float: none;
+		width: 100%;
+	}
+	#contact-version-two .doctor_group .doctor {
+		width: 100%;
+	}
+}
+div.mf-name, div.mf-email, div.mf-captcha, div.mf-message {
+	padding-bottom: 0.4em;
+	width: 80%;
+}
+div.mf-name input, div.mf-email input {
+	width: 60%;
+}
+div.mf-message textarea {
+	width: 60%;
+}
+span.mf-req {
+	color: red;
+}
+div.mf-ok-text {
+	color: green;
+	font-weight: bold;
+	padding-bottom: 1em;
+}
+.contact2-cal {
+	border: 1px solid #dcddde;
+	color: #6d6d6d;
+	font-size: 12px;
+	font-weight: bold;
+	margin-bottom: 25px;
+	padding: 11px 15px;
+	width: 90%;
+}
+.control-group img {
+	height: 25px;
+	width: 25px;
+}
+.err_m {
+	color: red;
+}
+.ok_request {
+	font-size: 20px;
+	margin-top: 30px;
+}

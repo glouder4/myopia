@@ -1,0 +1,19 @@
+div.mfeedback {}
+div.mf-name, div.mf-email, div.mf-captcha, div.mf-message {width:80%; padding-bottom:0.4em;}
+div.mf-name input, div.mf-email input {width:60%;}
+div.mf-message textarea {width: 60%;}
+span.mf-req {color:red;}
+div.mf-ok-text {color:green; font-weight:bold; padding-bottom: 1em;}
+.contact2-cal{
+    border: 1px solid #dcddde;
+    width: 90%;
+    padding: 11px 15px;
+    color: #6d6d6d;
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+.control-group img{
+width: 25px;
+height: 25px;
+}

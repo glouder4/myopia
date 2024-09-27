@@ -1,0 +1,87 @@
+#voucher {
+	border: 1px solid #777;
+	margin: 0 auto;
+	padding: 10px;
+	width: 500px;
+	font-family: "Noto Sans", sans-serif;
+}
+#voucher .voucher_clear {
+	clear: both;
+	font-size: 1px;
+	line-height: 1px;
+	width: 100%;
+}
+#voucher .voucher_clinic_top {
+	clear: both;
+	width: 100%;
+}
+#voucher .voucher_clinic_top .clinic_logo {
+	float: left;
+	margin-right: 20px;
+	width: 167px;
+}
+#voucher .voucher_clinic_top .clinic_address {
+	float: left;
+	text-align: center;
+	width: calc(100% - 20px - 167px);
+}
+#voucher .voucher_clinic_top .clinic_address .clinic_name {
+	border-bottom: 1px solid #777;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 18px;
+	margin-bottom: 3px;
+}
+#voucher .voucher_clinic_top .clinic_address .clinic_addr {
+	font-size: 11px;
+	line-height: 12px;
+}
+#voucher .voucher_clinic_top .clinic_address .clinic_contacts {
+	font-size: 10px;
+	line-height: 10px;
+	margin-top: 2px;
+}
+#voucher .voucher_data {
+	border-top: 1px solid #777;
+	margin-top: 10px;
+}
+#voucher .voucher_data .voucher_top {
+	clear: both;
+	margin-top: 10px;
+}
+#voucher .voucher_data .voucher_top .voucher_top_left {
+	float: left;
+	font-size: 26px;
+	line-height: 44px;
+	text-align: center;
+	width: 185px;
+}
+#voucher .voucher_data .voucher_top .voucher_top_left span {
+	display: block;
+	font-size: 50px;
+}
+#voucher .voucher_data .voucher_top .voucher_top_right {
+	border-left: 1px solid #777;
+	float: left;
+	font-size: 24px;
+	line-height: 28px;
+	margin-top: 7px;
+	padding-left: 25px;
+	text-align: left;
+}
+#voucher .voucher_data .voucher_bottom {
+	border-top: 1px solid #777;
+	margin-top: 22px;
+}
+#voucher .voucher_data .voucher_bottom .user_info {
+	font-size: 18px;
+	text-align: center;
+}
+#voucher .voucher_data .voucher_bottom .voucher_legend_bottom {
+	border-top: 1px solid #777;
+	font-size: 10px;
+	line-height: 11px;
+	margin-top: 5px;
+	padding-top: 7px;
+	text-align: center;
+}

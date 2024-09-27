@@ -1,0 +1,107 @@
+@media (min-width: 992px){
+    .tiny-nav{
+        position:fixed;
+
+    }
+}
+@media (max-width: 1120px) and (min-width: 992px) {
+    .service-title{
+        font-size: 20px !important;
+    }
+
+}
+@media (max-width: 990px){
+    #headerstic{
+
+        position:relative;
+
+    }
+    .ihome-banner {
+        display: none;
+        height:0;
+        top: -1500px;
+    }
+}
+@media (max-width: 767px){
+    .navbar-collapse {
+        margin-top: 5px;
+        width: 100%;
+    }}
+.service-title {
+    min-height: 50px;
+}
+.contact2-cal{
+    border: 1px solid #dcddde;
+    width: 90%;
+    padding: 11px 15px;
+    color: #6d6d6d;
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+.control-group img {
+    width: 25px;
+    height: 25px;
+}
+#blog-full-width-post ul, .our-facilities ul, .tab-content ul, .column-element ul, .collapse-widget-content ul, .test-box ul, .doctor_info ul{
+    margin: 0px;
+    padding: 5px;
+}
+#blog-full-width-post li, .our-facilities li, .tab-content li, .column-element li, .collapse-widget-content li, .test-box li, .doctor_info li{
+    list-style-type: disc;
+}
+
+.blog-collapse-title {
+    display: table !important;
+    width: 95% !important;
+}
+.blog-collapse-title span{
+    display: table-cell;
+}
+
+.blog-collapse-title .col-1{
+    width: 80%;
+}
+.blog-collapse-title .col-2{
+    width: 20%;
+    text-align: right;
+    min-width: 55px;
+}
+
+
+.dept-form.appointment-form .btn-7 {
+    min-width: 150px;
+}
+#close {
+    z-index: 999;
+}
+.banner {
+    background: #fff !important;
+}
+.services-page .service-title {
+    font-size: 22px;
+    line-height: 1.2em;
+}
+.service-title i.fa {
+    color: #fff;
+    float: left;
+    font-size: 24px;
+    height: 46px;
+    line-height: 46px !important;
+    margin-right: 15px;
+    text-align: center;
+    width: 46px;
+}
+.services-page .service-box > p {
+    padding-top: 15px;
+    height: 100px;
+    overflow: hidden;
+    text-indent: 0;
+}
+.services-page .service-title span{
+    line-height: 1em;
+}
+body .dept-icon {
+    font-size: 24px;
+    line-height: 1.9em;
+}

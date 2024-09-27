@@ -1,0 +1,11 @@
+input.auth-sumbit.btn {
+	background: #128ee1;
+	color: #fff;
+	border-radius: 0;
+	padding: 10px 0;
+	margin: 20px 0;
+	width: 100%;
+}
+input.contact2-textbox.form-control {
+	padding: 20px 15px;
+}
