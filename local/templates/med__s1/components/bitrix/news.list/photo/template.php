@@ -14,7 +14,7 @@ $this->setFrameMode(true);
 ?>
 
 
-<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="about-us-version-two">
+<div class="col-xs-12 col-sm-12" id="about-us-version-two">
     <div class="slider-border">
         <div id="main_area">
             <!-- Slider -->

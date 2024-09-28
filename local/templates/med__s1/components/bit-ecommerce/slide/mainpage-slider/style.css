@@ -1,0 +1,44 @@
+.tp-caption.imed-sl1.title>strong{
+    font-family: 'TTDrugs-Regular'!important;
+    font-weight: 400;
+    line-height: 58px;
+    font-size: 52px;
+}
+.tp-caption.imed-sl1.descr>strong,
+.tp-caption.imed-sl1.descr>strong>p{
+    font-family: 'Circe';
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #212223;
+}
+.s1-but.abtn a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: unset!important;
+    border: 1px solid black;
+    border-radius: 36px;
+    box-sizing: border-box;
+    width: 253px;
+    height: 52px;
+
+    font-family: 'Circe';
+    font-size: 18px!important;
+    color: #212223!important;
+    font-weight: 400;
+}
+.tp-bullets{
+    display: flex;
+    gap: 8px;
+}
+.tp-bullets.simplebullets.square-old .bullet{
+    width: 11px!important;
+    background: unset!important;
+    height: 11px!important;
+    border-radius: 50% !important;
+    background-color: #A9A9A9!important;
+}
+.tp-bullets.simplebullets .bullet.selected, .tp-bullets.simplebullets .bullet:hover{
+    background-color: #F7A709!important;
+}

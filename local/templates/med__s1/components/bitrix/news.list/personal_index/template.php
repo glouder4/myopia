@@ -14,7 +14,7 @@ $this->setFrameMode(true);
 ?>
 		
 
-			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 ">
+			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 " id="personal-index">
 				<?foreach($arResult["ITEMS"] as $arItem):?>
 					<?
 					$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
@@ -22,17 +22,20 @@ $this->setFrameMode(true);
 					?>
 
 
-					     <a href="<?echo $arItem["DETAIL_PAGE_URL"]?>"><div class="doctor-box col-md-4 col-sm-6 col-xs-12 wow animated"  id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-                        
-                        	<div class="zoom-wrap">
-                          <div class="zoom-icon"></div>
-                        	<img alt="" class="img-responsive" src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>" />
-                          </div>
-                      	<div class="doc-name">
-                          	<div class="doc-name-class"><?=$arItem['IBLOCK_SECTION_NAME']?></div><span class="doc-title"><?=$arItem['NAME_IMPLODE']?></span>
-                          
-                          </div>
-                         </div></a>
+					     <a href="<?echo $arItem["DETAIL_PAGE_URL"]?>">
+                             <div class="doctor-box col-md-4 col-sm-6 col-xs-12 wow animated"  id="<?=$this->GetEditAreaId($arItem['ID']);?>">
+                                <div class="doctor-wrapper">
+                                    <div class="zoom-wrap">
+                                        <div class="zoom-icon"></div>
+                                        <img alt="" class="img-responsive" src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>" />
+                                    </div>
+                                    <div class="doc-name">
+                                        <div class="doc-name-class"><?=$arItem['IBLOCK_SECTION_NAME']?></div>
+                                        <span class="doc-title"><?=$arItem['NAME_IMPLODE']?></span>
+                                    </div>
+                                </div>
+                             </div>
+                         </a>
 
 
 				<?endforeach;?>

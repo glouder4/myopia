@@ -193,3 +193,32 @@ bx-newslist-slider-arrow,
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
+
+#news-list{
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+#news-list .subtitle{
+	text-align: center;
+	margin-bottom: 35px;
+}
+#news-list .post-item-wrap+.post-item-wrap{
+	margin-top: 0;
+}
+#news-list .post-meta-top >ul >li{
+	color: #868686;
+}
+#news-list .post-content2 p{
+	color: #212223;
+	font-weight: 400;
+	font-family: 'Circe Light'!important;
+}
+#news-list .dept-details-butt{
+	max-width: 224px;
+	border-radius: 36px;
+	background-color: unset;
+	border: 1px solid black;
+	color: black;
+	margin: auto;
+}

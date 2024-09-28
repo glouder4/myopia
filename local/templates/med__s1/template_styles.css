@@ -66,7 +66,9 @@
     url('./fonts/circe_thin.ttf') format('truetype'), /* Safari, Android, iOS */
     url('./fonts/circe_thin.svg#circe_thin') format('svg'); /* Chrome < 4, Legacy iOS */
 }
-
+p {
+    text-indent: 0px;
+}
 
 @media (min-width: 992px){
     .tiny-nav{
@@ -207,9 +209,58 @@ body .dept-icon {
 body *{
     font-family: 'Circe'!important;
 }
+body p{
+    font-family: 'Circe Light'!important;
+    color: #212223!important;
+}
+#footer p{
+    color: #bcbec0!important;
+}
 
 h2,
 .bluebg-t2,
-.whitebg-t2{
+.whitebg-t2,
+#news-list .subtitle{
     font-family: 'TTDrugs-Regular'!important;
+}
+ #text-block-separator p{
+     color: #212223;
+     font-weight: 400;
+     font-size: 16px;
+ }
+ #services-list .service-title .fa{
+     border-radius: 50%;
+     background-color: white;
+     border: 1px solid rgb(247, 167, 9);
+     color: rgb(247, 167, 9);
+ }
+#services-list .service-title .fa:after{
+    content: unset;
+}
+
+.dropdown-menu >li >a{
+    white-space: normal!important;
+}
+.catagory-list li.selected a{
+    text-decoration: underline;
+}
+
+#homepage-long-version-two .doctor-content-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#homepage-long-version-two .doctor-content-title h2,
+#homepage-long-version-two .doctor-content-title p{
+    text-align: center;
+}
+@media(min-width: 768px){
+    #homepage-long-version-two .doctor-content-title{
+        align-items: flex-start;
+    }
+    #homepage-long-version-two .doctor-content-title h2,
+    #homepage-long-version-two .doctor-content-title p{
+        text-align: left;
+    }
 }

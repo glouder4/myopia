@@ -12,7 +12,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<div class="container">
+<div class="container" id="services-list">
 	<div class="row">
 		<? foreach ($arResult["ITEMS"] as $key=>$arItem): ?>
 			<?

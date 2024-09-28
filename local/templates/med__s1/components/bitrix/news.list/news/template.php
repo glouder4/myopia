@@ -14,9 +14,9 @@ $this->setFrameMode(true);
 ?>
 		
 
-                <div class="col-xs-12 col-sm-12 col-md-6">                 
+                <div class="col-xs-12 col-sm-12" id="news-list">
                     <div class="row">
-					    <div class="subtitle col-xs-12 col-sm-11 col-md-12"><?echo GetMessage("TITLE")?></div>
+					    <div class="subtitle col-xs-12 col-sm-11 col-md-12">Новости</div>
 
 						<?foreach($arResult["ITEMS"] as $arItem):?>
     							<?
@@ -24,7 +24,7 @@ $this->setFrameMode(true);
     							$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
     							?>
 
-                        <div class="post-item-wrap col-sm-6 col-md-12 col-xs-12" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
+                            <div class="post-item-wrap col-sm-6" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
                             <div class="row">
                                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
 									<a href="<?echo $arItem["DETAIL_PAGE_URL"]?>">
@@ -48,6 +48,7 @@ $this->setFrameMode(true);
                         </div>					 
 
 						<?endforeach;?>
-                        <a href="<?=SITE_DIR?>news/" class="dept-details-butt pull-right"><?echo GetMessage("CT_BNL_GOTO_NEWS")?></a>
                     </div>
+
+                    <a href="<?=SITE_DIR?>news/" class="col-xs-12 dept-details-butt pull-right"><?echo GetMessage("CT_BNL_GOTO_NEWS")?></a>
                 </div>

@@ -18,7 +18,7 @@ $this->setFrameMode(true);
                     continue;
                 ?>
                 <?if($arItem["SELECTED"]):?>
-                <li><a href="<?=$arItem["LINK"]?>" class="selected"> <i class="fa fa-angle-right about-list-arrows"></i> <?=$arItem["TEXT"]?></a></li>
+                <li class="selected"><a href="<?=$arItem["LINK"]?>" class="selected"> <i class="fa fa-angle-right about-list-arrows"></i> <?=$arItem["TEXT"]?></a></li>
             <?else:?>
                 <li><a href="<?=$arItem["LINK"]?>"><i class="fa fa-angle-right about-list-arrows"></i><?=$arItem["TEXT"]?></a></li>
             <?endif?>

@@ -29,7 +29,8 @@
     #blog-medium-left .r-more a,
     .doctors-3col-tabs .nav >li >a:hover,
     .blog-box-title,
-    .post-meta a{
+    .post-meta a,
+    .intro-content-wrap .inner-page-butt-blue{
         color: <?=$CUR_COLOR_MAIN;?>;
     }
     li.flexMenu-viewMore >a{
@@ -63,7 +64,8 @@
     .doctors-3col-tabs .nav-tabs >li.active >a:before,
     .doctors-3col-tabs .nav >li >a:before,
     .contact2-page-form .btn2-st2,
-    .back-btn{
+    .back-btn,
+    .catagory-list li.selected a>i{
         background: <?=$CUR_COLOR_MAIN;?>;
     }
     .dropdown-menu >.active >a,
@@ -71,10 +73,12 @@
     #scrollUp,
     .dept-details-butt,
     .dept-details-butt:hover,
-    #shedule_form .clinics .clinic .open_doctors{
+    #shedule_form .clinics .clinic .open_doctors,
+    .inner-page-butt-blue:hover{
         background-color: <?=$CUR_COLOR_MAIN;?>;
     }
-    .dept-details-butt{
+    .dept-details-butt,
+    .catagory-list li.selected a>i{
         color: white;
     }
     .tabs-left >.nav-tabs >li >a:hover .dept-tabs-icon,
@@ -91,13 +95,19 @@
     .dept-details-butt,
     ul.left-menu li,
     #blog-medium-left .r-more a,
-    .back-btn{
+    .back-btn,
+    #personal-index a>.doctor-box>.doctor-wrapper .img-responsive,
+    #personal-index a>.doctor-box>.doctor-wrapper,
+    .inner-page-butt-blue:hover,
+    #endpage-slider .item,
+    .catagory-list li.selected a>i{
         border-color: <?=$CUR_COLOR_MAIN;?>;
     }
     .inner-page-butt-blue,
     .appointment-form .btn-7,
     .contact2-page-form .btn2-st2,
-    .back-btn{
+    .back-btn,
+    .inner-page-butt-blue:hover{
         box-shadow: 0 2px <?=$CUR_COLOR_MAIN_ADD;?>;
     }
     .service-box .rot-y .panel-icon:after{
@@ -105,6 +115,11 @@
     }
     .service-box p{
         border-bottom-color: <?=$CUR_COLOR_MAIN;?>;
+    }
+    .s1-but.abtn a:hover,
+    #news-list a.dept-details-butt:hover{
+        border-color: <?=$CUR_COLOR_MAIN;?>;
+        color: <?=$CUR_COLOR_MAIN;?>!important;
     }
 
     @media screen and (max-width: 767px) {

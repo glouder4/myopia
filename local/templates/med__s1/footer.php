@@ -115,6 +115,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)die();?>
 	<script type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/js/flexmenu.js"></script>
 	<script type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/js/imask.js"></script>
 	<script type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/js/custom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
    	<script type='text/javascript'>
 		$(window).load(function(){
 			$('#loader-overlay').fadeOut(900);

@@ -12,9 +12,12 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<div class="container">
+<div class="container" id="our-companies">
 	<div class="row">
 		<div class="no-pad icon-boxes-1">
+            <div class="section-title">
+                <h2 class="title">Преимущества компании</h2>
+            </div>
 			<? foreach ($arResult["ITEMS"] as $arItem):?>
 				<?
 				$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
@@ -34,11 +37,7 @@ $this->setFrameMode(true);
 						</div>
 						<div class="icon-box2-title"><?= $arItem['NAME_IMPLODE'] ?></div>
 						<p><?= $arItem['PREVIEW_TEXT'] ?></p>
-						<? if ($arItem["DETAIL_TEXT"]): ?>
-							<div class="iconbox-readmore">
-								<a href="<? echo $arItem["DETAIL_PAGE_URL"] ?>"><? echo GetMessage("CT_BNL_GOTO_DETAIL") ?></a>
-							</div>
-						<? endif; ?>
+
 					</div>
 				</div>
 

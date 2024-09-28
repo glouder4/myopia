@@ -5,6 +5,7 @@ $curPage = $APPLICATION->GetCurPage(true);
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?= LANGUAGE_ID ?>" lang="<?= LANGUAGE_ID ?>">
 <head>
+    <meta name="robots" content="noindex,nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <?
     CUtil::InitJSCore(array('fx'));
@@ -26,7 +27,7 @@ $curPage = $APPLICATION->GetCurPage(true);
 	?>
     <title><? $APPLICATION->ShowTitle(); ?></title>
     <link rel="shortcut icon" type="image/png" href="<?= SITE_TEMPLATE_PATH ?>/images/faivcon.png"/>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
     <?php
         $APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => SITE_TEMPLATE_PATH ."/template_colors_modifier.php"), false);
     ?>
@@ -95,7 +96,7 @@ $curPage = $APPLICATION->GetCurPage(true);
                     ); ?>
                     <? $APPLICATION->IncludeComponent("bit-ecommerce:visually.impaired","",Array()); ?>
                     <div id="search" class="fa fa-search search-head"></div>
-	                <div class="auth_panel">
+	                <!-- <div class="auth_panel">
 		                <?
 		                global $USER;
 		                $userFname = $USER->GetFirstName();
@@ -121,7 +122,7 @@ $curPage = $APPLICATION->GetCurPage(true);
 				                <li><a href="/?logout=yes&sessid=<?=bitrix_sessid()?>"><?= GetMessage("TMPL_LOGOUT") ?></a></li>
 			                </ul>
 		                <? } ?>
-	                </div>
+	                </div>!-->
                 </div>
 
             </div>

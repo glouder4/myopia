@@ -196,3 +196,27 @@ bx-newslist-slider-arrow,
 .icon-box2-title{
 min-height:50px; 
 }
+
+#our-companies .section-title{
+	margin-bottom: 25px;
+}
+#our-companies .section-title>.title{
+	text-align: center;
+}
+#our-companies .icon-box-3{
+	border-radius: 30px;
+
+	background-color: #FFFFFF;
+	-webkit-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+	-moz-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+	box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+#our-companies .icon-box2-title{
+	color: #212223;
+	margin-bottom: 15px;
+}
+#our-companies .icon-box-3 p{
+	color: #212223;
+	font-weight: 400;
+	font-size: 14px;
+}
