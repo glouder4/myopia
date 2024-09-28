@@ -264,3 +264,33 @@ h2,
         text-align: left;
     }
 }
+
+#doctor-request-form-block>.container>.row{
+    -webkit-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#doctor-request-form-block #form-info{
+    display: flex;
+    flex-direction: column;
+
+    max-width: 535px;
+    gap: 20px;
+}
+#doctor-request-form-block #form-info>.image-wrapper>img{
+    border-radius: 30px;
+}
+#doctor-request-form-block #form-info>.title-wrapper>.title{
+    font-size: 32px;
+    margin: 0;
+}
+#doctor-request-form-block #form-info>.description-wrapper>p{
+    font-size: 16px;
+}

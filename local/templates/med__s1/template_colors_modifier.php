@@ -84,7 +84,8 @@
     .tabs-left >.nav-tabs >li >a:hover .dept-tabs-icon,
     .ui-state-active,
     .collapse-widget-side .ui-state-active,
-    .dropdown-menu >.active >a:hover{
+    .dropdown-menu >.active >a:hover,
+    #doctor-request #doctor-request-endform-wrapper>input[type="submit"]:hover{
         background-color: <?=$CUR_COLOR_MAIN;?>!important;
     }
     .iconbox-readmore,
@@ -100,7 +101,8 @@
     #personal-index a>.doctor-box>.doctor-wrapper,
     .inner-page-butt-blue:hover,
     #endpage-slider .item,
-    .catagory-list li.selected a>i{
+    .catagory-list li.selected a>i,
+    #doctor-request #doctor-request-endform-wrapper>input[type="submit"]{
         border-color: <?=$CUR_COLOR_MAIN;?>;
     }
     .inner-page-butt-blue,
