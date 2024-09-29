@@ -6,18 +6,12 @@ $arSelect = Array("ID", "NAME");
 $arFilter = Array("IBLOCK_ID"=> 9, "ACTIVE_DATE"=>"Y", "ACTIVE"=>"Y");
 $res = CIBlockElement::GetList(Array(), $arFilter, false, Array(), $arSelect);
 
-// WEB_FORM_ID: 1
-// form_text_1:
-// form_text_2:
-// form_text_3:
-// form_text_4:
-// form_textarea_5:
-// web_form_submit: Сохранить
-// web_form_apply: Y
 ?>
 <?if ($arResult["isFormErrors"] == "Y"):?><?=$arResult["FORM_ERRORS_TEXT"];?><?endif;?>
 
 <form action="#" id="doctor-request">
+    <input type="hidden" name="WEB_FORM_ID" value="<?=$arResult['arForm']['ID'];?>">
+    <?=bitrix_sessid_post('csrf_token');?>
     <div id="doctor-request-questions-list">
         <div id="select-doctor-question-wrapper">
             <div class="select">
@@ -62,6 +56,21 @@ $res = CIBlockElement::GetList(Array(), $arFilter, false, Array(), $arSelect);
                 <a href="#">Политикой конфиденциальности</a></p>
         </div>
     </div>
+
+    <div class="success-alert-wrapper" style="display: none;">
+        <div class="success-checkmark">
+            <div class="check-icon">
+                <span class="icon-line line-tip"></span>
+                <span class="icon-line line-long"></span>
+                <div class="icon-circle"></div>
+                <div class="icon-fix"></div>
+            </div>
+        </div>
+
+        <div class="success-data">
+            <p>Форма успешно отправлена</p>
+        </div>
+    </div>
 </form>
 
 <script>
@@ -92,4 +101,52 @@ $res = CIBlockElement::GetList(Array(), $arFilter, false, Array(), $arSelect);
             }
         });
     });
+
+
+    jQuery(document).ready(function($){
+        $('#doctor-request').submit(function (e){
+            e.preventDefault();
+
+            let web_form_id = $(this).find('input[name="WEB_FORM_ID"]').val();
+            let csrf_token = $(this).find('input[name="csrf_token"]').val();
+
+            let doctorName = $(this).find('input[name="select-doctor"]').val();
+            let fio = $(this).find('input[name="fio"]').val();
+            let phone = $(this).find('input[name="phone"]').val();
+            let email = $(this).find('input[name="email"]').val();
+            let comment = $(this).find('textarea[name="comment"]').val();
+
+            let checkbox = $(this).find('input[type="checkbox"]');
+
+
+            if( checkbox[0].checked ){
+                $.ajax({
+                    url: '<?=SITE_TEMPLATE_PATH?>/ajax.php',
+                    method: 'post',
+                    dataType: 'json',
+                    data: {
+                        csrf_token: csrf_token,
+                        web_form_id: web_form_id,
+                        doctorName: doctorName,
+                        fio: fio,
+                        phone: phone,
+                        email: email,
+                        comment: comment
+                    },
+                    success: function(data){
+
+                        $('#doctor-request .success-alert-wrapper').fadeIn();
+
+                        setTimeout(function (){
+                            $('#doctor-request .success-alert-wrapper').fadeOut();
+                        },2000);
+
+                        $("#doctor-request")[0].reset();
+                    }
+                });
+            }
+        })
+
+        $('#doctor-request input[name="phone"]').mask('+7 (999) 999-99-99');
+    })
 </script>

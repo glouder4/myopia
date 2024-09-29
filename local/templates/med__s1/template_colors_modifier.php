@@ -30,7 +30,8 @@
     .doctors-3col-tabs .nav >li >a:hover,
     .blog-box-title,
     .post-meta a,
-    .intro-content-wrap .inner-page-butt-blue{
+    .intro-content-wrap .inner-page-butt-blue,
+    footer#footer .foot-widget-column-2 ul.menu_flex>li>a:hover{
         color: <?=$CUR_COLOR_MAIN;?>;
     }
     li.flexMenu-viewMore >a{

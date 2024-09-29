@@ -294,3 +294,79 @@ h2,
 #doctor-request-form-block #form-info>.description-wrapper>p{
     font-size: 16px;
 }
+
+footer#footer{
+    background: #FFFFFF;
+}
+
+footer#footer #footer-column-1{
+    display: flex;
+    flex-direction: column;
+
+    gap: 36px;
+}
+footer#footer #footer-column-1>.text{
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+footer#footer #footer-column-1>.text>p{
+    color: #868686;
+    font-size: 15px;
+}
+footer#footer #footer-column-1>.text>a{
+    font-size: 15px;
+}
+footer#footer .foot-widget-column-2{
+    display: flex;
+    flex-direction: column;
+}
+footer#footer .foot-widget-column-4 .title-wrapper>.title,
+footer#footer .foot-widget-column-3 .title-wrapper>.title,
+footer#footer .foot-widget-column-2 .title-wrapper>.title{
+    font-size: 20px;
+    color: #212223;
+}
+footer#footer .foot-widget-column-2 ul.navbar-nav{
+
+}
+footer#footer .foot-widget-column-2 ul.navbar-nav>li>a{
+    padding: 7px;
+    padding-left: 0;
+
+    color: #212223;
+    font-size: 16px;
+}
+footer#footer .foot-widget-column-2 ul.navbar-nav>li>a:hover{
+    background-color: unset;
+}
+
+footer#footer .foot-widget-column-3>.data{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+footer#footer .foot-widget-column-3 .contacnt-footer-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+}
+footer#footer .foot-widget-column-3 .contacnt-footer-item>.text{
+    color: #212223;
+    font-size: 16px;
+    font-family: 'Circe Light'!important;
+}
+footer#footer .foot-widget-column-3>.data>.item>a{
+    font-size: 16px;
+}
+
+footer#footer .foot-widget-column-4{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+footer#footer .foot-widget-column-4>.social-wrap-head>ul{
+    display: flex;
+    gap: 6px;
+}
