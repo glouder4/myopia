@@ -52,7 +52,10 @@ $res = CIBlockElement::GetList(Array(), $arFilter, false, Array(), $arSelect);
         <input type="submit" value="Отправить">
 
         <div id="doctor-request-checkbox">
-            <input type="checkbox" /> <p>При отправке формы я принимаю условия <a href="#">Оферты</a> по использованию сайта и согласен с
+            <label>
+                <input type="checkbox" name="request-checkbox" />
+            </label>
+            <p>При отправке формы я принимаю условия <a href="#">Оферты</a> по использованию сайта и согласен с
                 <a href="#">Политикой конфиденциальности</a></p>
         </div>
     </div>

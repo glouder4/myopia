@@ -124,6 +124,10 @@
         border-color: <?=$CUR_COLOR_MAIN;?>;
         color: <?=$CUR_COLOR_MAIN;?>!important;
     }
+    label:has(input[type="checkbox"]:checked)::before {
+        border-color: <?=$CUR_COLOR_MAIN;?>;
+        background-color: <?=$CUR_COLOR_MAIN;?>;
+    }
 
     @media screen and (max-width: 767px) {
         .dept-tabs-icon {

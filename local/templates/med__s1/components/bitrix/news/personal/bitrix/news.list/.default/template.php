@@ -17,7 +17,9 @@ $this->setFrameMode(true);
         <ul class="nav nav-tabs tab-acc">
             <li <? if (!$arResult['SECTION_SELECTED']){ ?>class="active"<? } ?>>
                 <a href="<?= $arResult["ITEMS"][0]['LIST_PAGE_URL'] ?>"><?= GetMessage("OLD") ?></a></li>
-            <? foreach ($arResult["SECTION"] as $i => $arItem): ?>
+            <? foreach ($arResult["SECTION"] as $i => $arItem):
+                    if($arItem['ACTIVE'] == 'N') continue;
+                ?>
                 <li <? if($arItem["SELECTED"]) echo "class='active'";?>>
                     <a href="<?= $arItem['SECTION_PAGE_URL'] ?>"><?= $arItem['NAME'] ?></a></li>
             <? endforeach; ?>

@@ -24,9 +24,6 @@
             ); ?>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-6">
-            <div class="subtitle col-12">
-                <center><?= GetMessage("ADRESA_KLINIK") ?></center>
-            </div>
             <div id="imedica-dep-accordion">
                 <?
                 $len = sizeof($arResult["ITEMS"]);

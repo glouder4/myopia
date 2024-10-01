@@ -450,7 +450,8 @@ $APPLICATION->SetTitle("Главная");
                 "FIELD_CODE" => array(
                 ),
                 "PROPERTY_CODE" => array(
-                        "slider_image"
+                        "slider_image",
+                    "sldier_link"
                 ),
                 "CHECK_DATES" => "Y",
                 "DETAIL_URL" => SITE_DIR . "services/#ELEMENT_CODE#/",
