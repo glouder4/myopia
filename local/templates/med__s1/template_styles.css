@@ -148,7 +148,7 @@ p {
     z-index: 999;
 }
 .banner {
-    background: #fff !important;
+    background: #F6F6F6 !important;
 }
 .services-page .service-title {
     font-size: 22px;
@@ -272,6 +272,7 @@ h2,
     padding-top: 15px;
     padding-bottom: 15px;
     border-radius: 12px;
+    background: white;
 
     display: flex;
     justify-content: space-between;
@@ -296,7 +297,7 @@ h2,
 }
 
 footer#footer{
-    background: #FFFFFF;
+    background: #F6F6F6;
 }
 
 footer#footer #footer-column-1{
@@ -427,4 +428,40 @@ label:has(input[type="checkbox"]:disabled)::before {
 
 #shedule_form .clinics .clinic .clinic_doctors .doctor{
     border-width: 0;
+}
+.appt-form,
+#personal-index a>.doctor-box>.doctor-wrapper{
+    background: white;
+}
+.about-intro-wrap{
+    background: #f6f6f6;
+}
+#headerstic{
+    background: #f6f6f6!important;
+}
+#phone_callback-modal{
+    padding: 38px 50px;
+    border-radius: 30px;
+}
+#phone_callback-modal>.form-body{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#phone_callback-modal>.form-body>.logo{
+    margin: 0;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+#phone_callback-modal>.form-body>.title{
+    color: #212223;
+    font-size: 27px;
+    text-align: center;
+}
+#phone_callback-modal>.form-body>.desc{
+    color: #212223;
+    font-size: 16px;
+    line-height: 20px;
 }

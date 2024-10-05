@@ -11,6 +11,7 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+
 ?>
 <div class="col-xs-12 col-sm-12 col-md-12 pull-left doctors-3col-tabs no-pad">
     <div class="content-tabs tabs col-xs-12 col-sm-12">

@@ -38,8 +38,6 @@ CJSCore::Init(Array("viewer"));
                         <a href="<?= $arResult["LIST_PAGE_URL"] ?>"
                            class="back-btn"><?= GetMessage('BIT_GO_BACK') ?></a>
                     </div>
-                    <div class="ya-share2 col-lg-6 col-md-6 col-sm-6 col-xs-12"
-                         data-services="vkontakte,facebook,odnoklassniki,moimir,twitter" data-counter=""></div>
                 </div>
             </div>
         </div>

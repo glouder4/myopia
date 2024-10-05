@@ -28,6 +28,7 @@ $curPage = $APPLICATION->GetCurPage(true);
     <title><? $APPLICATION->ShowTitle(); ?></title>
     <link rel="shortcut icon" type="image/png" href="<?= SITE_TEMPLATE_PATH ?>/images/faivcon.png"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" />
     <?php
         $APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => SITE_TEMPLATE_PATH ."/template_colors_modifier.php"), false);
     ?>

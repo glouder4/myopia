@@ -71,7 +71,7 @@ $APPLICATION->SetTitle("Учебный центр");
             $cur_url = $APPLICATION->GetCurPage(false);
             $path_name = explode('/',$cur_url)[1];
             $page_name = explode('/',$cur_url)[2];
-            $APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => SITE_TEMPLATE_PATH ."/".$path_name."/include/".$page_name), false);
+            $APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => SITE_TEMPLATE_PATH ."/".$path_name."/include/appointments.php"), false);
             ?>
         </div>
     </div>

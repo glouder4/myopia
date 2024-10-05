@@ -55,7 +55,7 @@
 .bx-pagination .bx-pagination-container ul li.bx-pag-all a span,
 .bx-pagination .bx-pagination-container ul li.bx-pag-prev a span,
 .bx-pagination .bx-pagination-container ul li.bx-pag-next a span {
-	background: #fff;
+	background: #F6F6F6;
 	border: 2px solid #eff0f1;
 	line-height: 28px;
 	padding: 0 18px;
@@ -65,7 +65,7 @@
 .bx-pagination .bx-pagination-container ul li.bx-pag-prev span,
 .bx-pagination .bx-pagination-container ul li.bx-pag-next span{
 	color: #aab1b4;
-	background: #fff;
+	background: #F6F6F6;
 	border: 2px solid #eff0f1;
 	line-height: 28px;
 	padding: 0 18px;
@@ -73,7 +73,7 @@
 .bx-pagination .bx-pagination-container ul li.bx-pag-all a:hover span,
 .bx-pagination .bx-pagination-container ul li.bx-pag-prev a:hover span,
 .bx-pagination .bx-pagination-container ul li.bx-pag-next a:hover span {
-	background: #fff;
+	background: #F6F6F6;
 	border-color: #DADADA;
 	color: #000;
 }

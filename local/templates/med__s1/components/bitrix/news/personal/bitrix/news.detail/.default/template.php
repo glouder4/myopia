@@ -14,17 +14,7 @@ $this->setFrameMode(true);
 ?>
 <div class="row">
     <div id="<?= $this->GetEditAreaId($arResult['ID']); ?>" class="col-xs-12 col-sm-12 col-md-12 pull-left doctors-3col-tabs no-pad" >
-        <div class="content-tabs tabs col-xs-12 col-sm-12">
-            <ul class="nav nav-tabs tab-acc" id="myTab">
-                <li <? if (!$arResult['SECTION_SELECTED']){ ?>class="active"<? } ?>>
-                    <a href="<?= $arResult['LIST_PAGE_URL'] ?>"><?= GetMessage("OLD") ?></a>
-                </li>
-                <? foreach ($arResult["SECTION"] as $i => $arItem): ?>
-                    <li <? if ($arItem["SELECTED"]) echo "class='active'"; ?>>
-                        <a href="<?= $arItem['SECTION_PAGE_URL'] ?>"><?= $arItem['NAME'] ?></a></li>
-                <? endforeach; ?>
-            </ul>
-        </div>
+
 
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 doctor-box">
 

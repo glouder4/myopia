@@ -78,7 +78,7 @@ $APPLICATION->SetTitle("О клинике");
                                 Array("MODE"=>"html")
                             );?>
                         </p>
-                        <a href="<?=SITE_DIR?>appointments/" class="inner-page-butt-blue large-but"><i class="fa fa-cogs inner-page-butt-blue-icon"></i>Записаться на прием</a>
+                        <a data-fancybox href="#phone_callback-modal" class="inner-page-butt-blue large-but"><i class="fa fa-cogs inner-page-butt-blue-icon"></i>Записаться на прием</a>
                     </div><!--our-facilities-->
                 </div><!--facilities end-->
             </div><!--col-md-6 first end-->

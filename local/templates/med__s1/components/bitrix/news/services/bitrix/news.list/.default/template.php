@@ -33,10 +33,10 @@ $this->setFrameMode(true);
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wow">
 
                         <div class="blog-box-title"><a href="<?echo $arItem["DETAIL_PAGE_URL"]?>"><?=$arItem['NAME']?></a></div>
-                        <div class="post-meta">
+                        <!-- <div class="post-meta">
                             <span class="post-date"><?echo $arItem["DISPLAY_ACTIVE_FROM"]?> </span>
 
-                        </div>
+                        </div> -->
                         <div class="post-para">
                             <p><?=$arItem['PREVIEW_TEXT']?></p>
                         </div><!--end-post-para-->

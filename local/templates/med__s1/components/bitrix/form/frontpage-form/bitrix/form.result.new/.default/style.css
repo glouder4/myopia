@@ -41,7 +41,7 @@
 	top: 100%;
 	left: 0;
 	right: 0;
-	background: #fff;
+	background: #F6F6F6;
 	box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 	border-radius: 10px;
 	margin-top: 5px;
@@ -183,7 +183,7 @@
 	content: "";
 	height: 100px;
 	position: absolute;
-	background: #ffffff;
+	background: #F6F6F6fff;
 	transform: rotate(-45deg);
 }
 .success-checkmark .check-icon .icon-line {
@@ -227,7 +227,7 @@
 	height: 85px;
 	position: absolute;
 	transform: rotate(-45deg);
-	background-color: #ffffff;
+	background-color: #F6F6F6fff;
 }
 
 @keyframes rotate-circle {
@@ -302,7 +302,7 @@
 	width: 100%;
 	height: 100%;
 
-	background-color: rgba(255,255,255,0.8);
+	background-color: rgba(246,246,246,0.8);
 }
 
 #doctor-request  .success-alert-wrapper>.success-data{
@@ -315,4 +315,8 @@
 #doctor-request  .success-alert-wrapper>.success-data p{
 	font-size: 18px;
 	text-align: center;
+}
+#doctor-request textarea,
+#doctor-request input{
+	outline: none;
 }

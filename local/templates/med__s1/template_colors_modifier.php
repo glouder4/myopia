@@ -31,7 +31,9 @@
     .blog-box-title,
     .post-meta a,
     .intro-content-wrap .inner-page-butt-blue,
-    footer#footer .foot-widget-column-2 ul.menu_flex>li>a:hover{
+    footer#footer .foot-widget-column-2 ul.menu_flex>li>a:hover,
+    .table-elements th,
+    .nav-tabs >li >a{
         color: <?=$CUR_COLOR_MAIN;?>;
     }
     li.flexMenu-viewMore >a{
@@ -84,11 +86,17 @@
     }
     .tabs-left >.nav-tabs >li >a:hover .dept-tabs-icon,
     .ui-state-active,
+    .shedule2doc,
+    .shedule2doc:hover,
+    .back-btn,
+    .back-btn:hover,
     .collapse-widget-side .ui-state-active,
     .dropdown-menu >.active >a:hover,
-    #doctor-request #doctor-request-endform-wrapper>input[type="submit"]:hover{
+    #doctor-request #doctor-request-endform-wrapper>input[type="submit"]:hover,
+    #doctor-request-modal #doctor-request-modal-endform-wrapper>input[type="submit"]:hover{
         background-color: <?=$CUR_COLOR_MAIN;?>!important;
     }
+
     .iconbox-readmore,
     .icon-box-3:hover .iconbox-readmore,
     #home-page-version-five .medical-theme-block,
@@ -98,12 +106,14 @@
     ul.left-menu li,
     #blog-medium-left .r-more a,
     .back-btn,
+    .back-btn:hover,
     #personal-index a>.doctor-box>.doctor-wrapper .img-responsive,
     #personal-index a>.doctor-box>.doctor-wrapper,
     .inner-page-butt-blue:hover,
     #endpage-slider .item,
     .catagory-list li.selected a>i,
-    #doctor-request #doctor-request-endform-wrapper>input[type="submit"]{
+    #doctor-request #doctor-request-endform-wrapper>input[type="submit"],
+    #doctor-request-modal #doctor-request-modal-endform-wrapper>input[type="submit"]{
         border-color: <?=$CUR_COLOR_MAIN;?>;
     }
     .inner-page-butt-blue,
@@ -163,7 +173,6 @@
             color: <?=$CUR_COLOR_MAIN;?> !important;
         }
     }
-
     .icon-boxwrap2{
         background-color: <?=$CUR_COLOR_MAIN;?>;
         background: -webkit-gradient(linear, left top, left bottom, color-stop(0, <?=$CUR_COLOR_MAIN;?>), color-stop(50%, <?=$CUR_COLOR_MAIN;?>), color-stop(51%, <?=$CUR_COLOR_MAIN_ADD;?>), color-stop(100%, <?=$CUR_COLOR_MAIN_ADD;?>));
@@ -172,5 +181,15 @@
         background: -o-linear-gradient(top, <?=$CUR_COLOR_MAIN;?> 0, <?=$CUR_COLOR_MAIN;?> 50%, <?=$CUR_COLOR_MAIN_ADD;?> 51%, <?=$CUR_COLOR_MAIN_ADD;?> 100%);
         background: -webkit-gradient(linear, left top, left bottom, color-stop(0, <?=$CUR_COLOR_MAIN;?>), color-stop(50%, <?=$CUR_COLOR_MAIN;?>), color-stop(51%, <?=$CUR_COLOR_MAIN_ADD;?>), to(<?=$CUR_COLOR_MAIN_ADD;?>));
         background: linear-gradient(top, <?=$CUR_COLOR_MAIN;?> 0, <?=$CUR_COLOR_MAIN;?> 50%, <?=$CUR_COLOR_MAIN_ADD;?> 51%, <?=$CUR_COLOR_MAIN_ADD;?> 100%);
+    }
+    #doctor-request input:focus,
+    #doctor-request-modal input:focus,
+    #doctor-request input:active,
+    #doctor-request-modal input:active,
+    #doctor-request textarea:focus,
+    #doctor-request-modal textarea:focus,
+    #doctor-request textarea:active,
+    #doctor-request-modal textarea:active{
+        border-color: <?=$CUR_COLOR_MAIN;?>!important;
     }
 </style>

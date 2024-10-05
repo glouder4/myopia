@@ -1564,7 +1564,7 @@ border-style:none;
 .tp-rightarrow.preview1:after				{	content: '\e825';  }
 .tp-leftarrow.preview1:after				{	content: '\e824';  }
 
-.tparrows.preview1:hover:after 				{	background:rgba(255,255,255,1); color:#aaa}
+.tparrows.preview1:hover:after 				{	background:rgba(246,246,246,1); color:#aaa}
 
 .tparrows.preview1 .tp-arr-imgholder 		{	background-size:cover; background-position:center center; display:block;width:100%;height:100%;position:absolute;top:0px;
 												-webkit-transition: -webkit-transform 0.3s;
@@ -1796,7 +1796,7 @@ border-style:none;
 
 
 /* NAVIGATION PREVIEW 3 */
-.tparrows.preview3 							{	width:70px; height:70px; background:#fff; background:rgba(255,255,255,1); -webkit-transform-style: flat}
+.tparrows.preview3 							{	width:70px; height:70px; background:#fff; background:rgba(246,246,246,1); -webkit-transform-style: flat}
 .tparrows.preview3:after					{	position:absolute;  line-height: 70px;text-align: center; font-family: "revicons"; color:#aaa; font-size:30px; top:0px;left:0px;;background:#fff; z-index:100; width:70px;height:70px; -webkit-transition: color 0.3s; -moz-transition: color 0.3s; transition: color 0.3s}
 .tparrows.preview3:hover:after					{	color:#000}
 .tp-rightarrow.preview3:after				{	content: '\e825';  }
@@ -2048,7 +2048,7 @@ border-style:none;
   width: 40px;
   height: 40px;
   background:url(../assets/loader.gif) no-repeat center center;
-  background-color: #fff;
+  background-color: #F6F6F6;
   box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
   margin-top:-20px;
@@ -2064,7 +2064,7 @@ border-style:none;
 .tp-loader.spinner1 {
   width: 40px;
   height: 40px;
-  background-color: #fff;
+  background-color: #F6F6F6;
   box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
   margin-top:-20px;
@@ -2154,7 +2154,7 @@ border-style:none;
 .tp-loader.spinner3 .bounce3 {
   width: 18px;
   height: 18px;
-  background-color: #fff;
+  background-color: #F6F6F6;
   box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
   border-radius: 100%;
@@ -2210,7 +2210,7 @@ border-style:none;
   display: inline-block;
   position: absolute;
   top: 0;
-  background-color: #fff;
+  background-color: #F6F6F6;
   border-radius: 100%;
   -webkit-animation: tp-bounce 2.0s infinite ease-in-out;
   animation: tp-bounce 2.0s infinite ease-in-out;

@@ -12,13 +12,24 @@ if( isset($_POST['csrf_token']) ){
         $email = $_POST['email'];
         $comment = $_POST['comment'];
 
-        $fields = [
-            'form_text_1' => $doctorName,
-            'form_text_2' => $fio,
-            'form_text_3' => $phone,
-            'form_text_4' => $email,
-            'form_textarea_5' => $comment
-        ];
+        if( $web_form_id == 1 ){
+            $fields = [
+                'form_text_1' => $doctorName,
+                'form_text_2' => $fio,
+                'form_text_3' => $phone,
+                'form_text_4' => $email,
+                'form_textarea_5' => $comment
+            ];
+        }
+        elseif( $web_form_id == 2 ){
+            $fields = [
+                'form_text_6' => $fio,
+                'form_text_7' => $phone,
+                'form_text_8' => $email,
+                'form_textarea_9' => $comment
+            ];
+        }
+
 
         $formErrors = CForm::Check($web_form_id, $fields, false, "N", 'Y');
 
