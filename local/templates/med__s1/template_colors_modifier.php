@@ -92,6 +92,7 @@
     .back-btn:hover,
     .collapse-widget-side .ui-state-active,
     .dropdown-menu >.active >a:hover,
+    .purchase-strip-blue.dept-apponit-butt .btn:hover, 
     #doctor-request #doctor-request-endform-wrapper>input[type="submit"]:hover,
     #doctor-request-modal #doctor-request-modal-endform-wrapper>input[type="submit"]:hover{
         background-color: <?=$CUR_COLOR_MAIN;?>!important;
