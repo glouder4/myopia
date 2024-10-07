@@ -97,6 +97,10 @@
     #doctor-request-modal #doctor-request-modal-endform-wrapper>input[type="submit"]:hover{
         background-color: <?=$CUR_COLOR_MAIN;?>!important;
     }
+    .shedule2doc,
+    .shedule2doc:hover{
+        background: <?=$CUR_COLOR_MAIN;?>!important;
+    }
 
     .iconbox-readmore,
     .icon-box-3:hover .iconbox-readmore,

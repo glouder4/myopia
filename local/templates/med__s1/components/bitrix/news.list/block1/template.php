@@ -16,7 +16,7 @@ $this->setFrameMode(true);
 	<div class="row">
 		<div class="no-pad icon-boxes-1">
             <div class="section-title">
-                <h2 class="title">Преимущества компании</h2>
+                <h2 class="title">Преимущества клиники</h2>
             </div>
 			<? foreach ($arResult["ITEMS"] as $arItem):?>
 				<?

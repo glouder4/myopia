@@ -30,9 +30,7 @@ $this->setFrameMode(true);
                 <div class='clinic_block'>
                     <?= $arResult['DISPLAY_PROPERTIES']['IB_CLINIC']['DISPLAY_VALUE'] ?>
                 </div>
-                <?
-                $APPLICATION->IncludeComponent('bit-ecommerce:shedule', '', array('INNER' => true, 'DOCTOR_ID' => $arResult['ID']), $component);
-                ?>
+                <a data-fancybox href="#phone_callback-modal" class="shedule2doc">Записаться на прием</a>
             </div>
         </div>
 

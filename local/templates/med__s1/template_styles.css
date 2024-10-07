@@ -276,17 +276,32 @@ h2,
 
     display: flex;
     justify-content: space-between;
+
+    flex-direction: column;
+    gap: 15px;
 }
 
 #doctor-request-form-block #form-info{
     display: flex;
     flex-direction: column;
 
-    max-width: 535px;
     gap: 20px;
 }
 #doctor-request-form-block #form-info>.image-wrapper>img{
     border-radius: 30px;
+    width: 100%;
+}
+@media(min-width: 1200px){
+    #doctor-request-form-block #form-info{
+        max-width: 535px;
+    }
+    #doctor-request-form-block #form-info>.image-wrapper>img{
+        width: auto;
+    }
+    #doctor-request-form-block>.container>.row{
+        flex-direction: row;
+        gap: 0;
+    }
 }
 #doctor-request-form-block #form-info>.title-wrapper>.title{
     font-size: 32px;
@@ -370,6 +385,9 @@ footer#footer .foot-widget-column-4{
 footer#footer .foot-widget-column-4>.social-wrap-head>ul{
     display: flex;
     gap: 6px;
+}
+footer#footer {
+    padding: 40px 0px 45px 0;
 }
 
 
@@ -464,4 +482,30 @@ label:has(input[type="checkbox"]:disabled)::before {
     color: #212223;
     font-size: 16px;
     line-height: 20px;
+}
+.shedule2doc, .shedule2doc:hover,.shedule2doc:active,.shedule2doc:focus {
+    border: 0 solid #e0e1e2 !important;
+    color: white;
+    display: inline-block;
+    font-size: 20px;
+    padding: 5px;
+    text-decoration: none;
+    width: 100%;
+}
+.other-op .bvi-open>.fa-eye{
+    color: #fff;
+    font-size: 14px;
+    height: 29px;
+    width: 29px;
+    background: #666666;
+    float: left;
+    text-align: center;
+    line-height: 29px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    margin-right: 25px;
+}
+.foot-widget{
+    border: 0;
 }

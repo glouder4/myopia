@@ -23,7 +23,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)die();?>
                                     <p>Клиника контроля миопии <?=date('Y');?></p>
 
                                     <a href="#">
-                                        <img src="<?=SITE_TEMPLATE_PATH;?>/images/artmax_logo.jpg" alt="">
+                                        <img src="<?=SITE_TEMPLATE_PATH;?>/images/artmax_logo.svg" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -171,7 +171,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)die();?>
             </div>
             <h2 class="title">Заказать обратный звонок</h2>
             <p class="desc">
-                В нашей клинике представлены все основные медицинские направления. Мы с радостью поможем Вам по любым вопросам здоровья и жизни! Доверьтесь нам один раз и Вы останетесь довольны!
+                Наши специалисты проведут консультацию и расскажут о процедуре подбора контактных линз
             </p>
             <div class="form">
                 <?$APPLICATION->IncludeComponent(

@@ -157,31 +157,7 @@ $curPage = $APPLICATION->GetCurPage(true);
             <ul class="nav navbar-nav navbar-right other-op">
 	            <li>
 		            <div class="auth_panel">
-			            <?
-			            global $USER;
-			            $userFname = $USER->GetFirstName();
-			            $userLname = $USER->GetLastName();
-			            ?>
-			            <?if (!$USER->IsAuthorized()) { ?>
-				            <a href="/login/" id="login-link" class="fancybox.ajax Link Menu__Link">
-					            <i class="fa fa-user" aria-hidden="true" style="margin-right: 5px;"></i>
-					            <span><?= GetMessage("TMPL_LOGIN") ?></span>
-				            </a> |
-				            <a href="/login/?register=yes&backurl=%2F" id="register-link" class="fancybox.ajax Link Menu__Link">
-					            <span><?= GetMessage("TMPL_REGISTER") ?></a></span>
-			            <? } else { ?>
-				            <a class="Link Menu__Link Link_icon" href="/account/" style="margin-left: 30px;">
-					            <i class="fa fa-user" aria-hidden="true" style="margin-right: 5px;"></i>
-					            <?if(strlen($userFname)<=0 || strlen($userLname)<=0):?>
-						            <span><?=$USER->GetEmail();?></span>
-					            <?else:?>
-						            <span><?=$userLname.' '.substr($userFname, 0, 1).'.'; ?></span>
-					            <?endif;?>
-				            </a>
-				            <ul class="auth_panel_submenu">
-					            <li><a href="/?logout=yes&sessid=<?=bitrix_sessid()?>"><?= GetMessage("TMPL_LOGOUT") ?></a></li>
-				            </ul>
-			            <? } ?>
+                        <? $APPLICATION->IncludeComponent("bit-ecommerce:visually.impaired","",Array()); ?>
 		            </div>
 	            </li>
                 <li>
