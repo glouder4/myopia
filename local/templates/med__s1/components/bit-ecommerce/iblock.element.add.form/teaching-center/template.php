@@ -16,7 +16,31 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 $this->setFrameMode(false);
 $firstBitMed = new CFirstbitMedOptions();
 
+$page = $APPLICATION->GetCurPage();
+echo "<pre>";
+print_r($page);
+echo "</pre>";
+die();
+class MiyopiaArtMaxCFirstbitMedOptions extends CFirstbitMedOptions{
+    static public function getLegalText($site = false) {
+        $legal_link = CFirstbitMedOptions::queryOption('FIRSTBIT_MED_LEGAL');
+        $offer_link = CFirstbitMedOptions::queryOption('FIRSTBIT_MED_OFFER');
+        $checkbox_text = CFirstbitMedOptions::queryOption('FIRSTBIT_MED_LEGAL_CB_TEXT');
+        $cookie_text = CFirstbitMedOptions::queryOption('FIRSTBIT_MED_LEGAL_CO_TEXT');
 
+        $result = str_replace(
+            array("#LEGAL#", "#OFFER#"),
+            array($legal_link, $offer_link),
+            $checkbox_text
+        );
+        return $result;
+    }
+    public function staticGetLegalText($site = false){
+
+        return self::getLegalText($site = false);
+    }
+}
+$artmax_firstBitMed = new MiyopiaArtMaxCFirstbitMedOptions();
 ?>
 <div class="appointment-form no-pad dept-form">
     <div class="appointment-form-title">
@@ -374,7 +398,7 @@ $firstBitMed = new CFirstbitMedOptions();
                     ?>
                     <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 control-group">
                         <label><input type="checkbox" value="<?=$enum_id['ID']?>" name="PROPERTY[AGREEMENT][<?=$enum_id['ID']?>]">
-                            <?=$firstBitMed->getLegalText()?>
+                            <?=$artmax_firstBitMed->staticGetLegalText()?>
                         </label>
                     </div>
                 <?endif;?>

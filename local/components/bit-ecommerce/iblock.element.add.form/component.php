@@ -323,7 +323,7 @@ if ($bAllowAccess)
 				$emailPreg = !preg_match("/^(?:[a-z0-9]+(?:[-_.]?[a-z0-9]+)?@[a-z0-9_.-]+(?:\.?[a-z0-9]+)?\.[a-z]{2,5})$/", $_REQUEST["PROPERTY"]['EMAIL'][0]);
 
 				if( $emailPreg ){
-					$arResult['ERRORS'][0] = 'Email ������ �� �� �������!';
+					$arResult['ERRORS'][0] = GetMessage("IBLOCK_EMAIL_ERROR");;
 				}
 
 			endif;
@@ -333,7 +333,7 @@ if ($bAllowAccess)
 				$phonePreg = preg_replace('/[^0-9]/', '', $_REQUEST["PROPERTY"]['TEL'][0]);
 
 				if( !preg_match("/^[0-9]{10,11}+$/", $phonePreg) ){
-					$arResult['ERRORS'][0] = '������� ������ �� �� �������!';
+					$arResult['ERRORS'][0] = GetMessage("IBLOCK_PHONE_ERROR");;
 				}
 
 			endif;
@@ -737,8 +737,10 @@ if ($bAllowAccess)
 
                     if($arResult["PROPERTY_LIST_FULL"][$idProp]["PROPERTY_TYPE"] == "L"){
                         $v = array_shift($v);
+
                         $arEventFields[$arResult["PROPERTY_LIST_FULL"][$idProp]["CODE"]] =  $arResult["PROPERTY_LIST_FULL"][$idProp]["ENUM"][$v]["VALUE"];
                     }
+
                 }
             };
             if(!empty($arParams["EVENT_MESSAGE_ID"]))
