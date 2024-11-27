@@ -6,6 +6,10 @@ $arSelect = Array("ID", "NAME");
 $arFilter = Array("IBLOCK_ID"=> 9, "ACTIVE_DATE"=>"Y", "ACTIVE"=>"Y");
 $res = CIBlockElement::GetList(Array(), $arFilter, false, Array(), $arSelect);
 
+if (CModule::IncludeModule("firstbit.med")):
+    $legal_link = CFirstbitMedOptions::queryOption('FIRSTBIT_MED_LEGAL');
+    $offer_link = CFirstbitMedOptions::queryOption('FIRSTBIT_MED_OFFER');
+endif;
 ?>
 <?if ($arResult["isFormErrors"] == "Y"):?><?=$arResult["FORM_ERRORS_TEXT"];?><?endif;?>
 
@@ -55,8 +59,8 @@ $res = CIBlockElement::GetList(Array(), $arFilter, false, Array(), $arSelect);
             <label>
                 <input type="checkbox" name="request-checkbox" />
             </label>
-            <p>При отправке формы я принимаю условия <a href="#">Оферты</a> по использованию сайта и согласен с
-                <a href="#">Политикой конфиденциальности</a></p>
+            <p>При отправке формы я принимаю условия <a href="<?=$legal_link?>">Оферты</a> по использованию сайта и согласен с
+                <a href="<?=$offer_link?>">Политикой конфиденциальности</a></p>
         </div>
     </div>
 
