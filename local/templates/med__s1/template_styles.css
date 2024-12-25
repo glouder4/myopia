@@ -511,3 +511,26 @@ label:has(input[type="checkbox"]:disabled)::before {
 .foot-widget{
     border: 0;
 }
+
+@media screen and (max-width: 767px) {
+    .other-op.nav >li {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .other-op.nav >li>i{
+        margin: 0;
+        width: 30px;
+    }
+    .other-op.nav >li>i+*{
+        width: calc(100% - 30px);
+        padding-left: 0;
+    }
+
+    .other-op.nav >li form input{
+        margin: 0;
+    }
+    .other-op.nav >li form .search-wrap{
+        width: 100%;
+    }
+}

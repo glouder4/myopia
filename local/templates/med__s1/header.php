@@ -170,18 +170,7 @@ $curPage = $APPLICATION->GetCurPage(true);
                 </li>
 
                 <li><i class="fa fa-globe icon-globe"> </i>
-                    <? if ($facebookLink): ?>
-                        <? $APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => "/include/socnet_facebook.php"), false); ?>
-                    <? endif ?>
-                    <? if ($twitterLink): ?>
-                        <? $APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => "/include/socnet_twitter.php"), false); ?>
-                    <? endif ?>
-                    <? if ($googlePlusLink): ?>
-                        <? $APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => "/include/socnet_google.php"), false); ?>
-                    <? endif ?>
-                    <? if ($twitterLink): ?>
-                        <? $APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => "/include/socnet_linkedin.php"), false); ?>
-                    <? endif ?>
+                    <? $APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => "/include/kontakt_header_adress.php"), false); ?>
                 </li>
                 <li><i class="fa fa-search icon-search"></i>
                     <? $APPLICATION->IncludeComponent(
