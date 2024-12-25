@@ -368,7 +368,9 @@ footer#footer .foot-widget-column-3 .contacnt-footer-item{
     align-items: center;
     gap: 7px;
 }
-footer#footer .foot-widget-column-3 .contacnt-footer-item>.text{
+footer#footer .foot-widget-column-3 .contacnt-footer-item>.text,
+footer#footer .foot-widget-column-3 .contacnt-footer-item>a,
+footer#footer .foot-widget-column-3 .contacnt-footer-item>a *{
     color: #212223;
     font-size: 16px;
     font-family: 'Circe Light'!important;
