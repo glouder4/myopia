@@ -82,6 +82,10 @@ $APPLICATION->AddChainItem($APPLICATION->GetTitle());
                     $cur_url = $APPLICATION->GetCurPage(false);
                     $path_name = explode('/',$cur_url)[1];
                     $page_name = explode('/',$cur_url)[2];
+                    // Проверяем, заканчивается ли строка на ".php"
+                    if (!preg_match('/\.php$/', $page_name)) {
+                        $page_name .= ".php";
+                    }
                     $APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => SITE_TEMPLATE_PATH ."/".$path_name."/include/".$page_name), false);
                 ?>
             </div>

@@ -1,3 +1,1 @@
-<a class="mail-menu" href="#">
-    <img src="<?=SITE_TEMPLATE_PATH?>/artmax-assets/VK_icon.svg" class="fa head-social-icon" alt="Ссылка ВКонтакте">
-</a>
+<a class="mail-menu" rel="nofollow" target="_blank" href="https://vk.com/ufaeyeclinic"> <img alt="Ссылка ВКонтакте" src="/local/templates/med__s1/artmax-assets/VK_icon.svg" class="fa head-social-icon"> </a>

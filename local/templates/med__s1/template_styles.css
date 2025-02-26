@@ -534,3 +534,32 @@ label:has(input[type="checkbox"]:disabled)::before {
         width: 100%;
     }
 }
+.zoom-wrap:hover .zoom-icon{
+    display: none!important;
+}
+footer#footer .navbar-nav{
+    margin: 0;
+}
+@media screen and (max-width: 767px) {
+    .other-op.nav >li >a {
+        padding: 0;
+    }
+    .other-op.nav >li:last-child {
+        padding-bottom: 22px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .navbar-toggle {
+         display: block !important;
+    }
+    #bs-example-navbar-collapse-1 {
+        width: 100%;
+    }
+    #footer {
+         position: relative!important;
+    }
+}
+
+.complete-content {
+    margin-bottom: 0!important;
+}

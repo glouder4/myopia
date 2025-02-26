@@ -104,6 +104,25 @@
 
 	box-sizing: border-box;
 	padding: 10px 16px;
+	padding-left: 20px;
+}
+.required-input{
+	position: relative;
+}
+
+input.form-input[required]::placeholder {
+	color: gray; /* Цвет основного текста плейсхолдера */
+	opacity: 1;
+}
+
+.required-input::after {
+	content: "*";
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: red; /* Цвет звездочки */
+	font-weight: bold;
 }
 #doctor-request-modal #doctor-request-modal-questions-list textarea.form-input{
 	background-color: white;

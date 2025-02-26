@@ -7,7 +7,7 @@ $frame = $this->createFrame("slide", false)->begin();
             	<div class="banner col-sm-12 col-xs-12 col-md-12">
                 	
                     <ul>
-               <?foreach ($arResult["ITEMS"] as $arItems):     
+               <?foreach ($arResult["ITEMS"] as $arItems):
 
         	   ?>				
                 <li data-transition="fade" data-slotamount="1" data-delay="<?=$arItems['PROPERTY_SPEED_VALUE']?>" data-saveperformance="on"  data-title="Intro Slide">

@@ -5303,6 +5303,7 @@ select[multiple].input-group-sm >.input-group-btn >.btn {
   -webkit-border-top-left-radius: 0;
   -moz-border-radius-topleft: 0;
   border-top-left-radius: 0;
+  z-index: 30;
 }
 .navbar-nav .active .icon-angle-down {
   display: block;

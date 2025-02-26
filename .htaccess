@@ -1,0 +1,50 @@
+Options -Indexes
+ErrorDocument 404 /404.php
+
+RewriteEngine On
+
+# 1. Исключаем админку и AJAX-файлы из обработки (чтобы там не ломалось)
+RewriteCond %{REQUEST_URI} ^/bitrix/ [NC,OR]
+RewriteCond %{REQUEST_URI} ajax\.php$ [NC]
+RewriteRule .* - [L]
+
+# 2. Перенаправление с `.php` на `/`, кроме админки и AJAX-файлов
+RewriteCond %{THE_REQUEST} /([^.]+)\.php [NC]
+RewriteCond %{REQUEST_URI} !^/bitrix/ [NC]
+RewriteCond %{REQUEST_URI} !ajax\.php$ [NC]
+RewriteRule ^ /%1/ [R=301,L]
+
+# 3. Открываем файлы без `.php`, кроме админки и AJAX-файлов
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteCond %{REQUEST_URI} !^/bitrix/ [NC]
+RewriteCond %{REQUEST_URI} !ajax\.php$ [NC]
+RewriteRule ^(.+?)/?$ $1.php [L]
+
+<IfModule mod_rewrite.c>
+  Options +FollowSymLinks
+  RewriteEngine On
+
+  # Основное правило для ЧПУ Битрикса
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !/bitrix/urlrewrite.php$
+  RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
+
+  # Сохранение заголовка авторизации
+  RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+</IfModule>
+
+<IfModule mod_dir.c>
+  DirectoryIndex index.php index.html
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive on
+  ExpiresByType image/jpeg "access plus 3 day"
+  ExpiresByType image/gif "access plus 3 day"
+  ExpiresByType image/png "access plus 3 day"
+  ExpiresByType text/css "access plus 3 day"
+  ExpiresByType application/javascript "access plus 3 day"
+</IfModule>

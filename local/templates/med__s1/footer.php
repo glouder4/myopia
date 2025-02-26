@@ -22,7 +22,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)die();?>
                                 <div class="text">
                                     <p>Клиника контроля миопии <?=date('Y');?></p>
 
-                                    <a href="#">
+                                    <a href="https://www.artmax-studio.ru/" target="_blank"  rel="nofollow">
                                         <img src="<?=SITE_TEMPLATE_PATH;?>/images/artmax_logo.svg" alt="">
                                     </a>
                                 </div>
@@ -51,7 +51,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)die();?>
                                     <? $APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => "/include/footer-phone.php"), false); ?>
                                 </div>
                                 <div class="item">
-                                    <a data-fancybox href="#phone_callback-modal">Заказать обратный звонок</a>
+                                    <a data-fancybox data-options='{"touch" : false}' href="#phone_callback-modal">Заказать обратный звонок</a>
                                 </div>
                             </div>
                         </div>
@@ -146,14 +146,29 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)die();?>
 	<script type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/js/custom.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 
                 <script type='text/javascript'>
 		$(window).load(function(){
 			$('#loader-overlay').fadeOut(900);
 			$("html").css("overflow","visible");
 		});
-		<?if(stristr($curPage, 'contact') == true){?>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (typeof Fancybox !== "undefined") {
+                Fancybox.defaults.draggable = false;
+                Fancybox.bind('[data-fancybox]', {
+                    Carousel: {
+                        Panzoom: {
+                            touch: false,
+                        },
+                    },
+                });
+            } else {
+                console.error("Fancybox не загружен!");
+            }
+        });
+
+        <?if(stristr($curPage, 'contact') == true){?>
 		$( "#imedica-dep-accordion" ).accordion({ collapsible: true, active: false });
 		<?}?>
 	</script>

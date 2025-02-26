@@ -35,12 +35,12 @@ endif;
             </div>
         </div>
 
-        <div id="doctor-request-fio-wrapper">
-            <input type="text" name="fio"  class="form-input"value="" placeholder="Ф.И.О"/>
+        <div id="doctor-request-fio-wrapper" class="required-input">
+            <input type="text" name="fio"  class="form-input"value="" placeholder="Ф.И.О" required/>
         </div>
 
-        <div id="doctor-request-phone-wrapper">
-            <input type="tel" name="phone" class="form-input" value="" placeholder="Телефон" />
+        <div id="doctor-request-phone-wrapper" class="required-input">
+            <input type="tel" name="phone" class="form-input" value="" placeholder="Телефон" required />
         </div>
 
         <div id="doctor-request-email-wrapper">
@@ -57,7 +57,7 @@ endif;
 
         <div id="doctor-request-checkbox">
             <label>
-                <input type="checkbox" name="request-checkbox" />
+                <input type="checkbox" name="request-checkbox" checked />
             </label>
             <p>При отправке формы я принимаю условия <a href="<?=$legal_link?>">Оферты</a> по использованию сайта и согласен с
                 <a href="<?=$offer_link?>">Политикой конфиденциальности</a></p>
@@ -127,30 +127,35 @@ endif;
 
 
             if( checkbox[0].checked ){
-                $.ajax({
-                    url: '<?=SITE_TEMPLATE_PATH?>/ajax.php',
-                    method: 'post',
-                    dataType: 'json',
-                    data: {
-                        csrf_token: csrf_token,
-                        web_form_id: web_form_id,
-                        doctorName: doctorName,
-                        fio: fio,
-                        phone: phone,
-                        email: email,
-                        comment: comment
-                    },
-                    success: function(data){
+                grecaptcha.ready(function() {
+                    grecaptcha.execute('6LciTuMqAAAAAEDjMy5-d-7JldeIq52ctbCcRTnD', {action: 'submit'}).then(function(token) {
+                        $.ajax({
+                            url: '<?=SITE_TEMPLATE_PATH?>/ajax.php',
+                            method: 'post',
+                            dataType: 'json',
+                            data: {
+                                csrf_token: csrf_token,
+                                web_form_id: web_form_id,
+                                doctorName: doctorName,
+                                fio: fio,
+                                phone: phone,
+                                email: email,
+                                comment: comment,
+                                token: token
+                            },
+                            success: function(data){
 
-                        $('#doctor-request .success-alert-wrapper').fadeIn();
+                                $('#doctor-request .success-alert-wrapper').fadeIn();
 
-                        setTimeout(function (){
-                            $('#doctor-request .success-alert-wrapper').fadeOut();
-                        },2000);
+                                setTimeout(function (){
+                                    $('#doctor-request .success-alert-wrapper').fadeOut();
+                                },2000);
 
-                        $("#doctor-request")[0].reset();
-                    }
-                });
+                                $("#doctor-request")[0].reset();
+                            }
+                        });
+                    })
+                })
             }
         })
 

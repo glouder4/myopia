@@ -23,7 +23,7 @@ $this->setFrameMode(true);
             $link = $arItem['PROPERTIES']['sldier_link']['VALUE'];
             if( empty($link) ) $link = '#';
             ?>
-            <a href="<?=$link;?>" class="item" target="_blank">
+            <a href="<?=$link;?>" class="item"  rel="nofollow" target="_blank">
                 <img src="<?=$arItem['DISPLAY_PROPERTIES']['slider_image']['FILE_VALUE']['SRC']?>" alt="<?=$arItem['NAME'];?>">
             </a>
         <?

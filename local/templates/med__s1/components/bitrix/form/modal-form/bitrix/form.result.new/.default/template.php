@@ -1,10 +1,13 @@
 <?
 if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 
+if (!\Bitrix\Main\Loader::includeModule("iblock")) {
+    die("Ошибка: модуль инфоблоков не подключен");
+}
 
 $arSelect = Array("ID", "NAME");
 $arFilter = Array("IBLOCK_ID"=> 9, "ACTIVE_DATE"=>"Y", "ACTIVE"=>"Y");
-$res = CIBlockElement::GetList(Array(), $arFilter, false, Array(), $arSelect);
+$res = \CIBlockElement::GetList(Array(), $arFilter, false, Array(), $arSelect);
 
 ?>
 <?if ($arResult["isFormErrors"] == "Y"):?><?=$arResult["FORM_ERRORS_TEXT"];?><?endif;?>
@@ -14,12 +17,12 @@ $res = CIBlockElement::GetList(Array(), $arFilter, false, Array(), $arSelect);
     <?=bitrix_sessid_post('csrf_token');?>
     <div id="doctor-request-modal-questions-list">
 
-        <div id="doctor-request-modal-fio-wrapper">
-            <input type="text" name="fio"  class="form-input"value="" placeholder="Ф.И.О"/>
+        <div id="doctor-request-modal-fio-wrapper" class="required-input">
+            <input type="text" name="fio"  class="form-input"value="" placeholder="Ф.И.О" required/>
         </div>
 
-        <div id="doctor-request-modal-phone-wrapper">
-            <input type="tel" name="phone" class="form-input" value="" placeholder="Телефон" />
+        <div id="doctor-request-modal-phone-wrapper" class="required-input">
+            <input type="tel" name="phone" class="form-input" value="" placeholder="Телефон" required />
         </div>
 
         <div id="doctor-request-modal-email-wrapper">
@@ -36,7 +39,7 @@ $res = CIBlockElement::GetList(Array(), $arFilter, false, Array(), $arSelect);
 
         <div id="doctor-request-modal-checkbox">
             <label>
-                <input type="checkbox" name="request-checkbox" />
+                <input type="checkbox" checked name="request-checkbox" />
             </label>
             <p>При отправке формы я принимаю условия <a href="#">Оферты</a> по использованию сайта и согласен с
                 <a href="#">Политикой конфиденциальности</a></p>
@@ -78,28 +81,34 @@ $res = CIBlockElement::GetList(Array(), $arFilter, false, Array(), $arSelect);
 
 
             if( checkbox[0].checked ){
-                $.ajax({
-                    url: '<?=SITE_TEMPLATE_PATH?>/ajax.php',
-                    method: 'post',
-                    dataType: 'json',
-                    data: {
-                        csrf_token: csrf_token,
-                        web_form_id: web_form_id,
-                        fio: fio,
-                        phone: phone,
-                        email: email,
-                        comment: comment
-                    },
-                    success: function(data){
+                grecaptcha.ready(function() {
+                    grecaptcha.execute('6LciTuMqAAAAAEDjMy5-d-7JldeIq52ctbCcRTnD', {action: 'submit'}).then(function(token) {
+                        console.log(token)
+                        $.ajax({
+                            url: '<?=SITE_TEMPLATE_PATH?>/ajax.php',
+                            method: 'post',
+                            dataType: 'json',
+                            data: {
+                                csrf_token: csrf_token,
+                                web_form_id: web_form_id,
+                                fio: fio,
+                                phone: phone,
+                                email: email,
+                                comment: comment,
+                                token: token
+                            },
+                            success: function(data){
 
-                        $('#doctor-request-modal .success-alert-wrapper').fadeIn();
+                                $('#doctor-request-modal .success-alert-wrapper').fadeIn();
 
-                        setTimeout(function (){
-                            $('#doctor-request-modal .success-alert-wrapper').fadeOut();
-                        },2000);
+                                setTimeout(function (){
+                                    $('#doctor-request-modal .success-alert-wrapper').fadeOut();
+                                },2000);
 
-                        $("#doctor-request-modal")[0].reset();
-                    }
+                                $("#doctor-request-modal")[0].reset();
+                            }
+                        });
+                    });
                 });
             }
         })

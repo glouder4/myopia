@@ -11,8 +11,8 @@ $curPage = $APPLICATION->GetCurPage(true);
     CUtil::InitJSCore(array('fx'));
     CJSCore::Init(Array("viewer"));
     CJSCore::Init(array('jquery'));
-    $APPLICATION->addHeadString('<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,300" >');
-    $APPLICATION->addHeadString('<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic" >');
+    $APPLICATION->addHeadString('<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,300" >');
+    $APPLICATION->addHeadString('<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic" >');
     $APPLICATION->addHeadString('<link rel="stylesheet" type="text/css" href="' . SITE_TEMPLATE_PATH . '/css/jquery-ui-1.10.3.custom.css" >');
     $APPLICATION->addHeadString('<link rel="stylesheet" type="text/css" href="' . SITE_TEMPLATE_PATH . '/css/animate.css" >');
     $APPLICATION->addHeadString('<link rel="stylesheet" type="text/css" href="' . SITE_TEMPLATE_PATH . '/css/font-awesome.min.css" >');
@@ -28,7 +28,8 @@ $curPage = $APPLICATION->GetCurPage(true);
     <title><? $APPLICATION->ShowTitle(); ?></title>
     <link rel="shortcut icon" type="image/png" href="<?= SITE_TEMPLATE_PATH ?>/images/faivcon.png"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LciTuMqAAAAAEDjMy5-d-7JldeIq52ctbCcRTnD"></script>
     <?php
         $APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => SITE_TEMPLATE_PATH ."/template_colors_modifier.php"), false);
     ?>
