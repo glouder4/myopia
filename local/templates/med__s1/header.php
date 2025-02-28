@@ -26,7 +26,7 @@ $curPage = $APPLICATION->GetCurPage(true);
 	$APPLICATION->addHeadString('<link rel="stylesheet" type="text/css" href="' . SITE_TEMPLATE_PATH . '/css/inline.min.css" >');
 	?>
     <title><? $APPLICATION->ShowTitle(); ?></title>
-    <link rel="shortcut icon" type="image/png" href="<?= SITE_TEMPLATE_PATH ?>/images/faivcon.png"/>
+    <link rel="shortcut icon" type="image/png" href="<?= SITE_TEMPLATE_PATH ?>/images/favicon.ico"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
     <script src="https://www.google.com/recaptcha/api.js?render=6LciTuMqAAAAAEDjMy5-d-7JldeIq52ctbCcRTnD"></script>

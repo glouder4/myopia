@@ -172,7 +172,10 @@ p {
 }
 .services-page .service-title span{
     line-height: 1em;
+    /*max-height: fit-content;*/
+    font-size: 19px;
 }
+
 body .dept-icon {
     font-size: 24px;
     line-height: 1.9em;
@@ -562,4 +565,9 @@ footer#footer .navbar-nav{
 
 .complete-content {
     margin-bottom: 0!important;
+}
+@media(min-width: 991px){
+    .navbar-toggle {
+        display: none !important;
+    }
 }

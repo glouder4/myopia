@@ -9,10 +9,10 @@ RewriteCond %{REQUEST_URI} ajax\.php$ [NC]
 RewriteRule .* - [L]
 
 # 2. Перенаправление с `.php` на `/`, кроме админки и AJAX-файлов
-RewriteCond %{THE_REQUEST} /([^.]+)\.php [NC]
-RewriteCond %{REQUEST_URI} !^/bitrix/ [NC]
-RewriteCond %{REQUEST_URI} !ajax\.php$ [NC]
-RewriteRule ^ /%1/ [R=301,L]
+#RewriteCond %{THE_REQUEST} /([^.]+)\.php [NC]
+#RewriteCond %{REQUEST_URI} !^/bitrix/ [NC]
+#RewriteCond %{REQUEST_URI} !ajax\.php$ [NC]
+#RewriteRule ^ /%1/ [R=301,L]
 
 # 3. Открываем файлы без `.php`, кроме админки и AJAX-файлов
 RewriteCond %{REQUEST_FILENAME} !-d
