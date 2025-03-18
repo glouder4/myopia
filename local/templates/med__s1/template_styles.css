@@ -304,6 +304,9 @@ h2,
     #doctor-request-form-block>.container>.row{
         flex-direction: row;
         gap: 0;
+
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 }
 #doctor-request-form-block #form-info>.title-wrapper>.title{
@@ -566,8 +569,27 @@ footer#footer .navbar-nav{
 .complete-content {
     margin-bottom: 0!important;
 }
+.s1-but.abtn a:hover, #news-list a.dept-details-butt:hover{
+    border-color: white;
+    color: white!important;
+}
 @media(min-width: 991px){
     .navbar-toggle {
         display: none !important;
+    }
+
+    header .topbar-info .social-wrap-head>ul{
+        display: none;
+    }
+}
+@media(min-width: 768px){
+    #blog-medium-left .nav-tabs >li{
+        width: 100%;
+    }
+    #footer {
+         bottom: 0px!important;
+    }
+    .post-item-wrap+.post-item-wrap.col-sm-6{
+        margin-top: 0;
     }
 }

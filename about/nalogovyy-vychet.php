@@ -24,48 +24,7 @@ $APPLICATION->AddChainItem($APPLICATION->GetTitle());
                 )
             );?>
 
-            <?$APPLICATION->IncludeComponent(
-                "bit-ecommerce:iblock.element.add.form",
-                "",
-                Array(
-                    "AJAX_MODE" => "Y",
-                    "AJAX_OPTION_JUMP" => "N",
-                    "CUSTOM_TITLE_DATE_ACTIVE_FROM" => "",
-                    "CUSTOM_TITLE_DATE_ACTIVE_TO" => "",
-                    "CUSTOM_TITLE_DETAIL_PICTURE" => "",
-                    "CUSTOM_TITLE_DETAIL_TEXT" => "",
-                    "CUSTOM_TITLE_IBLOCK_SECTION" => "",
-                    "CUSTOM_TITLE_NAME" => "",
-                    "CUSTOM_TITLE_PREVIEW_PICTURE" => "",
-                    "CUSTOM_TITLE_PREVIEW_TEXT" => "",
-                    "CUSTOM_TITLE_TAGS" => "",
-                    "DEFAULT_INPUT_SIZE" => "30",
-                    "DETAIL_TEXT_USE_HTML_EDITOR" => "N",
-                    "ELEMENT_ASSOC" => "CREATED_BY",
-                    "ELEMENT_ASSOC_PROPERTY" => "",
-                    "EVENT_MESSAGE_ID" => array(),
-                    "GROUPS" => array("2"),
-                    "IBLOCK_ID" => "18",
-                    "IBLOCK_TYPE" => "med_bit_ecommerce_s1",
-                    "EVENT_NAME" => "FEEDBACK_FORM_MAIN",
-                    "LEVEL_LAST" => "N",
-                    "LIST_URL" => "",
-                    "MAX_FILE_SIZE" => "0",
-                    "MAX_LEVELS" => "100000",
-                    "MAX_USER_ENTRIES" => "100000",
-                    "PREVIEW_TEXT_USE_HTML_EDITOR" => "N",
-                    "PROPERTY_CODES" => array("AUTHOR", "EMAIL","MESSAGE","TEL"),
-                    "PROPERTY_CODES_REQUIRED" => array("AUTHOR", "EMAIL","MESSAGE"),
-                    "RESIZE_IMAGES" => "Y",
-                    "SEF_MODE" => "N",
-                    "STATUS" => "INACTIVE",
-                    "STATUS_NEW" => "NEW",
-                    "TITLE_ELEMENT" => "Обратная связь из левой колонки",
-                    "USER_MESSAGE_ADD" => "Ваша завка успешно отправлена",
-                    "USER_MESSAGE_EDIT" => "Saved",
-                    "USE_CAPTCHA" => "N"
-                )
-            );?>
+
         </div>
         <div class="col-xs-12 col-md-8">
             <div id="page-content">

@@ -178,8 +178,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)die();?>
 		</div>
 	</div>
 
-
-    <div style="display: none; width: 635px;" id="phone_callback-modal">
+    <div style="display: none; width: 635px; max-width: 100%;" id="phone_callback-modal">
         <div class="form-body">
             <div class="logo">
                 <? $APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => SITE_DIR . "include/logo.php"), false); ?>

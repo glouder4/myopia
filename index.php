@@ -286,7 +286,8 @@ $APPLICATION->SetTitle("Главная");
                                     $APPLICATION->GetTemplatePath(SITE_DIR . "include/doktor.php"),
                                     Array(),
                                     Array("MODE" => "html")
-                                ); ?> <a href="<?= SITE_DIR ?>personal/" class="inner-page-butt-blue">Подробнее</a>
+                                ); ?>
+                                <a href="<?= SITE_DIR ?>personal/" class="inner-page-butt-blue">Подробнее</a>
                             </div>
                             <!--doctor-content-title-->
                         </div>

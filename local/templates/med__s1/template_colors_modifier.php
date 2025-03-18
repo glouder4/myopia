@@ -6,6 +6,7 @@
     $CUR_COLOR_MAIN = COption::GetOptionString("firstbit.med", "FIRSTBIT_MED_COLOR_MAIN", false, $SITE['LID']);
     $CUR_COLOR_MAIN_ADD = COption::GetOptionString("firstbit.med", "FIRSTBIT_MED_COLOR_MAIN_ADD", false, $SITE['LID']);
 
+    $CUR_TEXT_COLOR = "#fff";
     ?>
 <style>
     a,
@@ -30,6 +31,7 @@
     .doctors-3col-tabs .nav >li >a:hover,
     .blog-box-title,
     .post-meta a,
+    .doc-name-class,
     .intro-content-wrap .inner-page-butt-blue,
     footer#footer .foot-widget-column-2 ul.menu_flex>li>a:hover,
     .table-elements th,
@@ -134,11 +136,11 @@
     .service-box p{
         border-bottom-color: <?=$CUR_COLOR_MAIN;?>;
     }
-    .s1-but.abtn a:hover,
+    /*.s1-but.abtn a:hover,
     #news-list a.dept-details-butt:hover{
         border-color: <?=$CUR_COLOR_MAIN;?>;
         color: <?=$CUR_COLOR_MAIN;?>!important;
-    }
+    }*/
     label:has(input[type="checkbox"]:checked)::before {
         border-color: <?=$CUR_COLOR_MAIN;?>;
         background-color: <?=$CUR_COLOR_MAIN;?>;
@@ -196,5 +198,9 @@
     #doctor-request textarea:active,
     #doctor-request-modal textarea:active{
         border-color: <?=$CUR_COLOR_MAIN;?>!important;
+    }
+
+    .intro-content-wrap .inner-page-butt-blue{
+        color: <?=$CUR_TEXT_COLOR;?>;
     }
 </style>
